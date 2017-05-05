@@ -53,7 +53,6 @@ class BaseCarListViewController:UITableViewController{
     /// Load The data
     /// - parameter isShowActivityIndicator: True to show The Activity Inndicator and False to hide it
     func loadData(isShowActivityIndicator:Bool){
-        DataAccessController.sharedInstance.setNewDataSource(source: .Onlone)
         activityIndeicator(isShow: isShowActivityIndicator)
     }
     
