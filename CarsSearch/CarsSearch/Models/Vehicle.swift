@@ -55,7 +55,7 @@ public class Vehicle: NSObject  {
 		images = []
 		if let items = json[kVehiclesImagesKey].array {
 			for item in items {
-				//images?.append( item. )
+				images?.append( item.string! )
 			}
 		} else {
 			images = nil
