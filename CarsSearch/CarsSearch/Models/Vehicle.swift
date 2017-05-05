@@ -8,7 +8,9 @@
 import Foundation
 import SwiftyJSON
 
-public class Vehicle: NSObject  {
+@objc public class Vehicle: NSObject,NSCoding  {
+ 
+
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kVehiclesImagesKey: String = "Images"
@@ -24,16 +26,16 @@ public class Vehicle: NSObject  {
 
 
     // MARK: Properties
-	public var images: [String]?
-	public var iD: Int?
-	public var powerKW: Int?
-	public var make: String?
-	public var firstRegistration: String?
-	public var address: String?
-	public var mileage: Int?
-	public var fuelType: String?
+	public var images: [String]
+	public var iD: Int
+	public var powerKW: Int
+	public var make: String
+	public var firstRegistration: String
+	public var address: String
+	public var mileage: Int
+	public var fuelType: String
 	public var accidentFree: Bool = false
-	public var price: Int?
+	public var price: Int
 
 
     // MARK: SwiftyJSON Initalizers
@@ -55,23 +57,51 @@ public class Vehicle: NSObject  {
 		images = []
 		if let items = json[kVehiclesImagesKey].array {
 			for item in items {
-				images?.append( item.string! )
+				images.append( item.string! )
 			}
-		} else {
-			images = nil
 		}
-		iD = json[kVehiclesIDKey].int
-		powerKW = json[kVehiclesPowerKWKey].int
-		make = json[kVehiclesMakeKey].string
-		firstRegistration = json[kVehiclesFirstRegistrationKey].string
-		address = json[kVehiclesAddressKey].string
-		mileage = json[kVehiclesMileageKey].int
-		fuelType = json[kVehiclesFuelTypeKey].string
+        
+		iD = json[kVehiclesIDKey].int!
+		powerKW = json[kVehiclesPowerKWKey].int!
+		make = json[kVehiclesMakeKey].string!
+		firstRegistration = json[kVehiclesFirstRegistrationKey].string!
+		address = json[kVehiclesAddressKey].string!
+		mileage = json[kVehiclesMileageKey].int!
+		fuelType = json[kVehiclesFuelTypeKey].string!
 		accidentFree = json[kVehiclesAccidentFreeKey].boolValue
-		price = json[kVehiclesPriceKey].int
+		price = json[kVehiclesPriceKey].int!
 
     }
 
     
+    
+    // MARK: NSCoding Protocol
+    public required init(coder aDecoder: NSCoder) {
+        self.images = (aDecoder.decodeObject(forKey: kVehiclesImagesKey) as? [String])!
+        self.iD =  aDecoder.decodeInteger(forKey: kVehiclesIDKey)
+        self.powerKW = aDecoder.decodeInteger(forKey: kVehiclesPowerKWKey)
+        self.make = (aDecoder.decodeObject(forKey: kVehiclesMakeKey) as? String)!
+        self.firstRegistration = (aDecoder.decodeObject(forKey: kVehiclesFirstRegistrationKey) as? String)!
+        self.address = (aDecoder.decodeObject(forKey: kVehiclesAddressKey) as? String)!
+        self.mileage = aDecoder.decodeInteger(forKey: kVehiclesMileageKey)  
+        self.fuelType = (aDecoder.decodeObject(forKey: kVehiclesFuelTypeKey) as? String)!
+        self.accidentFree = aDecoder.decodeBool(forKey: kVehiclesAccidentFreeKey)
+        self.price = aDecoder.decodeInteger(forKey: kVehiclesPriceKey)
+        
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(images, forKey: kVehiclesImagesKey)
+        aCoder.encode(iD, forKey: kVehiclesIDKey)
+        aCoder.encode(powerKW, forKey: kVehiclesPowerKWKey)
+        aCoder.encode(make, forKey: kVehiclesMakeKey)
+        aCoder.encode(firstRegistration, forKey: kVehiclesFirstRegistrationKey)
+        aCoder.encode(address, forKey: kVehiclesAddressKey)
+        aCoder.encode(mileage, forKey: kVehiclesMileageKey)
+        aCoder.encode(fuelType, forKey: kVehiclesFuelTypeKey)
+        aCoder.encode(accidentFree, forKey: kVehiclesAccidentFreeKey)
+        aCoder.encode(price, forKey: kVehiclesPriceKey)
+        
+    }
 
 }

@@ -396,6 +396,7 @@
 				TargetAttributes = {
 					00D851401EBC541E008210E0 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 45GZ4XUHCD;
 						ProvisioningStyle = Automatic;
 					};
 					00D851541EBC541E008210E0 = {
@@ -770,6 +771,7 @@
 			baseConfigurationReference = CEB8CF5A7BDC3630538B0C35 /* Pods-CarsSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 45GZ4XUHCD;
 				INFOPLIST_FILE = CarsSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -784,6 +786,7 @@
 			baseConfigurationReference = 847A6031C6B5A02BFEC59AFC /* Pods-CarsSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 45GZ4XUHCD;
 				INFOPLIST_FILE = CarsSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

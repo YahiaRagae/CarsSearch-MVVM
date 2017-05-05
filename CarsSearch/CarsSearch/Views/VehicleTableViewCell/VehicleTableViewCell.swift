@@ -15,4 +15,5 @@ class VehicleTableViewCell:UITableViewCell{
     @IBOutlet weak var lblFuelType: UILabel!
     
     @IBOutlet weak var switchFavorite: UISwitch!
+    @IBOutlet weak var btnFavorite: UIButton!
 }

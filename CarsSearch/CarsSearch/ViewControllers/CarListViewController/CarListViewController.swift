@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 class CarListViewController : BaseCarListViewController{
-    let defaultNAValue="N/A"
+    // MARK:- ViewController Life Cycle Methods
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+
     // MARK:- Class Methods
     override func initViews() {
         super.initViews()
@@ -27,16 +32,27 @@ class CarListViewController : BaseCarListViewController{
     }
     
     // MARK:- UITableView Deata Source Methods
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let vehicle : Vehicle = self.items[indexPath.row] as! Vehicle
         let   cell : VehicleTableViewCell  =  self.tableView.dequeueReusableCell(withIdentifier: "VehicleTableViewCell")! as! VehicleTableViewCell ;
-        cell.lblFuelType.text = "\(vehicle.fuelType ?? defaultNAValue)"
-        cell.lblMake.text =  "\(vehicle.make ?? defaultNAValue)"
-        cell.lblPrice.text =  "\(vehicle.price ?? 0)"
-        cell.lblMilage.text = "\(vehicle.mileage ?? 0)"
+        cell.lblFuelType.text = "\(vehicle.fuelType )"
+        cell.lblMake.text =  "\(vehicle.make )"
+        cell.lblPrice.text =  "\(vehicle.price )"
+        cell.lblMilage.text = "\(vehicle.mileage )"
+        
+        cell.switchFavorite.isHidden = false
+        cell.switchFavorite.tag = indexPath.row
+        cell.switchFavorite.addTarget(self, action: #selector(onValueChanged), for: UIControlEvents.valueChanged)
+        
+        cell.switchFavorite.setOn(DataAccessController.sharedInstance.checkFavorite(vehicle: vehicle), animated: false)
+        
         return cell;
-     }
-    
-    
+    }
     // MARK:- IBActions Methods
+    func onValueChanged(sender: UISwitch) {
+        let vehicle : Vehicle = self.items[sender.tag] as! Vehicle
+        DataAccessController.sharedInstance.processFavorites(vehicle: vehicle)
+    }
+    
+    
 }

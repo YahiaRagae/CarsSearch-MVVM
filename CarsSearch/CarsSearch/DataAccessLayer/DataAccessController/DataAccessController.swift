@@ -36,11 +36,13 @@ class DataAccessController {
     
     var onlineController:OnlineController!
     var dbController:DBController!
+    var favoritesController:FavoritesController!
        
     //Init and Init Helpers
     private init() {
         onlineController = OnlineController()
         dbController = DBController()
+        favoritesController = FavoritesController.sharedInstance
     }
     
     
@@ -61,6 +63,19 @@ class DataAccessController {
     
     func getAllCars(completion: ((NSMutableArray, Int) -> Void)?) {
         self.dataSource?.getAllCars(completion: completion)
+    }
+    
+    func getFavorites()-> NSMutableArray{
+        return favoritesController.favorites
+    }
+    
+    func processFavorites(vehicle : Vehicle){
+        favoritesController.processFavorite(vehicle: vehicle)
+    }
+    
+    func checkFavorite(vehicle : Vehicle)->Bool{
+        return         favoritesController.checkFavorite(vehicle: vehicle)
+
     }
     
 }
