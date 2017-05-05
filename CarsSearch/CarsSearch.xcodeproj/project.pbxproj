@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0025D7F51EBC5CE80010FA75 /* BaseCarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D7F41EBC5CE80010FA75 /* BaseCarListViewController.swift */; };
+		0025D7F91EBC5D150010FA75 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D7F81EBC5D150010FA75 /* FavoriteListViewController.swift */; };
+		0025D7FB1EBC5D1D0010FA75 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D7FA1EBC5D1D0010FA75 /* CarListViewController.swift */; };
+		0025D7FD1EBC5EF50010FA75 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0025D7FC1EBC5EF50010FA75 /* Media.xcassets */; };
+		0025D8001EBC627F0010FA75 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D7FF1EBC627F0010FA75 /* RootTabViewController.swift */; };
 		00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851441EBC541E008210E0 /* AppDelegate.swift */; };
-		00D851471EBC541E008210E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851461EBC541E008210E0 /* ViewController.swift */; };
 		00D8514A1EBC541E008210E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D851481EBC541E008210E0 /* Main.storyboard */; };
 		00D8514C1EBC541E008210E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D8514B1EBC541E008210E0 /* Assets.xcassets */; };
 		00D8514F1EBC541E008210E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D8514D1EBC541E008210E0 /* LaunchScreen.storyboard */; };
@@ -37,9 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0025D7F41EBC5CE80010FA75 /* BaseCarListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCarListViewController.swift; sourceTree = "<group>"; };
+		0025D7F81EBC5D150010FA75 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
+		0025D7FA1EBC5D1D0010FA75 /* CarListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
+		0025D7FC1EBC5EF50010FA75 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		0025D7FF1EBC627F0010FA75 /* RootTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		00D851411EBC541E008210E0 /* CarsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D851441EBC541E008210E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00D851461EBC541E008210E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00D851491EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00D8514B1EBC541E008210E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00D8514E1EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,9 +97,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0025D7F01EBC5A950010FA75 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0025D7FE1EBC62750010FA75 /* RootTabViewController */,
+				0025D7F71EBC5D0D0010FA75 /* FavoriteListViewController */,
+				0025D7F61EBC5D010010FA75 /* CarListViewController */,
+				0025D7F31EBC5CD00010FA75 /* BaseViewControllers */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0025D7F31EBC5CD00010FA75 /* BaseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0025D7F41EBC5CE80010FA75 /* BaseCarListViewController.swift */,
+			);
+			path = BaseViewControllers;
+			sourceTree = "<group>";
+		};
+		0025D7F61EBC5D010010FA75 /* CarListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0025D7FA1EBC5D1D0010FA75 /* CarListViewController.swift */,
+			);
+			path = CarListViewController;
+			sourceTree = "<group>";
+		};
+		0025D7F71EBC5D0D0010FA75 /* FavoriteListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0025D7F81EBC5D150010FA75 /* FavoriteListViewController.swift */,
+			);
+			path = FavoriteListViewController;
+			sourceTree = "<group>";
+		};
+		0025D7FE1EBC62750010FA75 /* RootTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0025D7FF1EBC627F0010FA75 /* RootTabViewController.swift */,
+			);
+			path = RootTabViewController;
+			sourceTree = "<group>";
+		};
 		00D851381EBC541E008210E0 = {
 			isa = PBXGroup;
 			children = (
+				0025D7FC1EBC5EF50010FA75 /* Media.xcassets */,
 				00D851431EBC541E008210E0 /* CarsSearch */,
 				00D851581EBC541E008210E0 /* CarsSearchTests */,
 				00D851631EBC541E008210E0 /* CarsSearchUITests */,
@@ -114,8 +166,8 @@
 		00D851431EBC541E008210E0 /* CarsSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0025D7F01EBC5A950010FA75 /* ViewControllers */,
 				00D851441EBC541E008210E0 /* AppDelegate.swift */,
-				00D851461EBC541E008210E0 /* ViewController.swift */,
 				00D851481EBC541E008210E0 /* Main.storyboard */,
 				00D8514B1EBC541E008210E0 /* Assets.xcassets */,
 				00D8514D1EBC541E008210E0 /* LaunchScreen.storyboard */,
@@ -283,6 +335,7 @@
 			files = (
 				00D8514F1EBC541E008210E0 /* LaunchScreen.storyboard in Resources */,
 				00D8514C1EBC541E008210E0 /* Assets.xcassets in Resources */,
+				0025D7FD1EBC5EF50010FA75 /* Media.xcassets in Resources */,
 				00D8514A1EBC541E008210E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,8 +499,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D851471EBC541E008210E0 /* ViewController.swift in Sources */,
+				0025D7F91EBC5D150010FA75 /* FavoriteListViewController.swift in Sources */,
+				0025D7FB1EBC5D1D0010FA75 /* CarListViewController.swift in Sources */,
+				0025D7F51EBC5CE80010FA75 /* BaseCarListViewController.swift in Sources */,
 				00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */,
+				0025D8001EBC627F0010FA75 /* RootTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
