@@ -33,7 +33,7 @@ class BaseCarListViewController:UITableViewController{
         initData();
         initViews();
         loadData(isShowActivityIndicator: true);
-
+        
     }
     
     // MARK:- Class Methods
@@ -47,7 +47,7 @@ class BaseCarListViewController:UITableViewController{
     func initViews(){
         
         self.tableView.register(UINib(nibName: "VehicleTableViewCell", bundle: nil), forCellReuseIdentifier: "VehicleTableViewCell")
- 
+        
     }
     
     /// Load The data
@@ -90,7 +90,16 @@ class BaseCarListViewController:UITableViewController{
         return items.count;
     }
     
-    
+    override public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let vehicle : Vehicle = self.items[indexPath.row] as! Vehicle
+        let   cell : VehicleTableViewCell  =  self.tableView.dequeueReusableCell(withIdentifier: "VehicleTableViewCell")! as! VehicleTableViewCell ;
+        cell.lblFuelType.text = "\(vehicle.fuelType )"
+        cell.lblMake.text =  "\(vehicle.make )"
+        cell.lblPrice.text =  "\(vehicle.price )"
+        cell.lblMilage.text = "\(vehicle.mileage )"
+        cell.selectionStyle = .none
+        return cell
+    }
     
     
 }

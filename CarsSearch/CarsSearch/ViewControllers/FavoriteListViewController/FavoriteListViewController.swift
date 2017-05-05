@@ -26,18 +26,12 @@ class FavoriteListViewController : BaseCarListViewController{
     
     // MARK:- UITableView Deata Source Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let vehicle : Vehicle = self.items[indexPath.row] as! Vehicle
-        let   cell : VehicleTableViewCell  =  self.tableView.dequeueReusableCell(withIdentifier: "VehicleTableViewCell")! as! VehicleTableViewCell ;
-        cell.lblFuelType.text = "\(vehicle.fuelType )"
-        cell.lblMake.text =  "\(vehicle.make )"
-        cell.lblPrice.text =  "\(vehicle.price )"
-        cell.lblMilage.text = "\(vehicle.mileage )"
-        
+        let   cell = super.tableView(self.tableView, cellForRowAt: indexPath) as! VehicleTableViewCell
         
         cell.btnFavorite.isHidden = false
         cell.btnFavorite.tag = indexPath.row
         cell.btnFavorite.addTarget(self, action: #selector(deleteVehicle), for: UIControlEvents.touchUpInside)
-         
+        
         
         return cell;
     }

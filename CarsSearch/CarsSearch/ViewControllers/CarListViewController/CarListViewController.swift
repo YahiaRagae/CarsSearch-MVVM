@@ -14,7 +14,7 @@ class CarListViewController : BaseCarListViewController{
         super.viewWillAppear(animated)
         self.tableView.reloadData()
     }
-
+    
     // MARK:- Class Methods
     override func initViews() {
         super.initViews()
@@ -33,12 +33,9 @@ class CarListViewController : BaseCarListViewController{
     
     // MARK:- UITableView Deata Source Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let   cell = super.tableView(self.tableView, cellForRowAt: indexPath) as! VehicleTableViewCell
         let vehicle : Vehicle = self.items[indexPath.row] as! Vehicle
-        let   cell : VehicleTableViewCell  =  self.tableView.dequeueReusableCell(withIdentifier: "VehicleTableViewCell")! as! VehicleTableViewCell ;
-        cell.lblFuelType.text = "\(vehicle.fuelType )"
-        cell.lblMake.text =  "\(vehicle.make )"
-        cell.lblPrice.text =  "\(vehicle.price )"
-        cell.lblMilage.text = "\(vehicle.mileage )"
+        
         
         cell.switchFavorite.isHidden = false
         cell.switchFavorite.tag = indexPath.row
