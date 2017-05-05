@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MainURL</key>
+	<string>http://sumamo.de/iOS-TechChallange/api/index/</string>
+	<key>URLs</key>
+	<dict>
+		<key>URL_GET_ALL_CARS</key>
+		<string>make=all.json</string>
+	</dict>
+</dict>
+</plist>
