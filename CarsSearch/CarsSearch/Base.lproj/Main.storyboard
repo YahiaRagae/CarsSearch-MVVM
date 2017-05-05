@@ -8,43 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cars-->
-        <scene sceneID="0Ev-17-ROA">
-            <objects>
-                <tableViewController storyboardIdentifier="CarListViewController" id="kuP-Sj-rHP" customClass="CarListViewController" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SV2-Ye-H67">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qWS-cb-u6r">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qWS-cb-u6r" id="0G9-I3-TCV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm8-5w-r8X">
-                                            <rect key="frame" x="164" y="0.0" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                        </button>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="kuP-Sj-rHP" id="JK1-gH-2te"/>
-                            <outlet property="delegate" destination="kuP-Sj-rHP" id="gPg-ay-1i7"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Cars" id="Yo5-50-2jv"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ro8-xT-Cia" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1367.2" y="-499.70014992503752"/>
-        </scene>
         <!--Root Tab View Controller-->
         <scene sceneID="fbS-it-yF4">
             <objects>
@@ -67,20 +30,10 @@
         <scene sceneID="9ye-bc-gxy">
             <objects>
                 <tableViewController storyboardIdentifier="FavoriteListViewController" id="F22-F4-tvJ" customClass="FavoriteListViewController" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tvy-Og-nVF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tvy-Og-nVF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mGy-3u-hwT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mGy-3u-hwT" id="qQR-wF-uVx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="F22-F4-tvJ" id="edE-st-kbO"/>
@@ -105,12 +58,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kuP-Sj-rHP" kind="relationship" relationship="rootViewController" id="ArY-Pe-wih"/>
+                        <segue destination="WKc-Aw-9K8" kind="relationship" relationship="rootViewController" id="lYp-zh-DfF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMX-BF-cm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="428" y="-499.70014992503752"/>
+        </scene>
+        <!--Cars-->
+        <scene sceneID="tRs-x0-fwi">
+            <objects>
+                <tableViewController storyboardIdentifier="CarListViewController" id="WKc-Aw-9K8" customClass="CarListViewController" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="ka1-Xe-O1N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="WKc-Aw-9K8" id="4WR-iv-AQ1"/>
+                            <outlet property="delegate" destination="WKc-Aw-9K8" id="a11-TF-98b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cars" id="xDD-SD-d4I"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcH-j7-umt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="-500"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="zkP-4v-Zfg">

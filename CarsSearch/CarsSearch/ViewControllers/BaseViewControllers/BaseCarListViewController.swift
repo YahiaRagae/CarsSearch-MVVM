@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import MBProgressHUD
 class BaseCarListViewController:UITableViewController{
     var items:NSMutableArray!;
     var refreshView :UIRefreshControl!
@@ -24,25 +24,65 @@ class BaseCarListViewController:UITableViewController{
         }
     }
     
+    
+    var hud : MBProgressHUD!;
     // MARK:- ViewController Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initData();
         initViews();
-        loadData(); 
+        loadData(isShowActivityIndicator: true);
 
     }
     
     // MARK:- Class Methods
+    
+    /// initialization of non views objects
     func initData(){
         items = NSMutableArray()
     }
+    
+    /// initialization related to the views
     func initViews(){
         
+        self.tableView.register(UINib(nibName: "VehicleTableViewCell", bundle: nil), forCellReuseIdentifier: "VehicleTableViewCell")
+ 
     }
-    func loadData(){
+    
+    /// Load The data
+    /// - parameter isShowActivityIndicator: True to show The Activity Inndicator and False to hide it
+    func loadData(isShowActivityIndicator:Bool){
+        DataAccessController.sharedInstance.setNewDataSource(source: .Onlone)
+        activityIndeicator(isShow: isShowActivityIndicator)
+    }
+    
+    /// Show / Hide Activity Indeicator
+    /// - parameter isShow: True to show The Activity Inndicator and False to hide it
+    func activityIndeicator(isShow:Bool){
+        if(hud == nil){
+            hud = MBProgressHUD.showAdded(to: self.tableView, animated: true)
+            hud.label.text = "loading"
+            hud.mode = .indeterminate
+        }
+        if(isShow){
+            if(hud.isHidden){
+                hud.show(animated: true)
+            }
+        }else{
+            hud.hide(animated: true)
+        }
+    }
+    
+    /// Call it when Data is Available
+    func loadingDidEnd(){
+        if(self.refreshView != nil && self.refreshView.isRefreshing){
+            self.refreshView.endRefreshing()
+        }
         
+        if(hud != nil && !hud.isHidden){
+            activityIndeicator(isShow: false)
+        }
     }
     // MARK:- UITableView Deata Source Methods
     
