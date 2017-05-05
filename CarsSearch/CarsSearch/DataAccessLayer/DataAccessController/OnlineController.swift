@@ -9,6 +9,6 @@
 import Foundation
 class OnlineController:NSObject,DataAccessControllerInterface{
     func getAllCars(completion: ((NSMutableArray, Int) -> Void)?) {
-       
+       CarsDataFetcher().getAllCars(withCompletion: completion)
     }
 }
