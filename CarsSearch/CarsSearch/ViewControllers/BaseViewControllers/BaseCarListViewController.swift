@@ -13,6 +13,7 @@ class BaseCarListViewController:UITableViewController{
     var items:NSMutableArray!;
     var refreshView :UIRefreshControl!
     
+    
     var isPullToRefreshEnable: Bool = false {
         didSet{
             if(refreshView != nil ){
@@ -36,7 +37,7 @@ class BaseCarListViewController:UITableViewController{
         
     }
     
-    // MARK:- Class Methods
+    // MARK:- Helper Methods
     
     /// initialization of non views objects
     func initData(){
@@ -100,5 +101,6 @@ class BaseCarListViewController:UITableViewController{
         return cell
     }
     
+ 
     
 }

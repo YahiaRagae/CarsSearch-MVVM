@@ -15,7 +15,7 @@ class CarListViewController : BaseCarListViewController{
         self.tableView.reloadData()
     }
     
-    // MARK:- Class Methods
+    // MARK:- Helper Methods
     override func initViews() {
         super.initViews()
         self.isPullToRefreshEnable = true
