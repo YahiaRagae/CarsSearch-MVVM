@@ -12,6 +12,8 @@ import MBProgressHUD
 
 class BaseCarListViewController:UITableViewController{
     var items:NSMutableArray!;
+    var orginalItems:NSMutableArray!;
+    
     var refreshView :UIRefreshControl!
     
     var filter:Filter = Filter.All
@@ -43,19 +45,23 @@ class BaseCarListViewController:UITableViewController{
         loadData(isShowActivityIndicator: true);
         
     }
-    
     // MARK:- Helper Methods
     
     /// initialization of non views objects
     func initData(){
         items = NSMutableArray()
+        orginalItems = NSMutableArray()
     }
     
     /// initialization related to the views
     func initViews(){
         
+        //Register UITable Cell
         self.tableView.register(UINib(nibName: "VehicleTableViewCell", bundle: nil), forCellReuseIdentifier: "VehicleTableViewCell")
+
         
+        //Add Filters Button
+        self.navigationItem.rightBarButtonItem = sortNavButton()
     }
     
     /// Load The data
@@ -99,6 +105,8 @@ class BaseCarListViewController:UITableViewController{
         cell.lblMake.text =  "\(vehicle.make )"
         cell.lblPrice.text =  "\(vehicle.price )"
         cell.lblMilage.text = "\(vehicle.mileage )"
+        cell.lblRegistrationFirst.text = "\(vehicle.firstRegistration )"
+        
         cell.selectionStyle = .none
         
         cell.img.imageFromUrl(urlString: vehicle.images[0])

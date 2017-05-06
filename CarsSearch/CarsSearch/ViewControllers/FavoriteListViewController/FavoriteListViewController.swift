@@ -18,7 +18,9 @@ class FavoriteListViewController : BaseCarListViewController{
     // MARK:- Helper Methods
     override func loadData(isShowActivityIndicator: Bool) {
         super.loadData(isShowActivityIndicator: isShowActivityIndicator)
-        items = DataAccessController.sharedInstance.getFavorite(withFilter: filter)
+        orginalItems = DataAccessController.sharedInstance.getFavorite(withFilter: filter)
+        items = getSortedList()
+        
         self.tableView.reloadData()
         
         loadingDidEnd()

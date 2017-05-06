@@ -13,6 +13,7 @@ class CarListViewController : BaseCarListViewController{
     // MARK:- ViewController Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.items = self.getSortedList()
         self.tableView.reloadData()
     }
     
@@ -28,8 +29,10 @@ class CarListViewController : BaseCarListViewController{
             if(errorMessage != nil && _items.count == 0 ){
                 self.tableView.makeToast(errorMessage, duration: 2.0, position: "CSToastPositionCenter")
             }
-            self.items.removeAllObjects();
-            self.items.addObjects(from: _items as! [Any])
+            self.orginalItems = _items.mutableCopy()   as! NSMutableArray
+            self.items = self.getSortedList()
+            
+            
             self.tableView.reloadData()
             self.loadingDidEnd()
         }

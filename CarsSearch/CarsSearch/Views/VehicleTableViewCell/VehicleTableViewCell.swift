@@ -13,6 +13,7 @@ class VehicleTableViewCell:UITableViewCell{
     @IBOutlet weak var lblMilage: UILabel!
     @IBOutlet weak var lblMake: UILabel!
     @IBOutlet weak var lblFuelType: UILabel!
+    @IBOutlet weak var lblRegistrationFirst: UILabel!
     
     @IBOutlet weak var switchFavorite: UISwitch!
     @IBOutlet weak var btnFavorite: UIButton!
