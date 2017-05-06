@@ -16,6 +16,13 @@ enum DataSources {
     case DB
 }
 
+enum Filter:String {
+    case All = "all"
+    case BMW = "bmw"
+    case AUDI = "audi"
+    case MERCEDES = "mercedes-benz"
+}
+
 
 //MARK: Protocol
 protocol DataAccessControllerInterface{
