@@ -113,6 +113,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="laoding Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-wJ-IGV">
+                        <rect key="frame" x="266" y="4" width="92" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="HuC-Mk-doH"/>
+                            <constraint firstAttribute="width" constant="92" id="a2t-De-zX7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-ue-tNP">
+                        <rect key="frame" x="302" y="5" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Wer-Hx-mE8" firstAttribute="top" secondItem="ZlK-7j-3yl" secondAttribute="top" constant="8" id="1Lt-aT-qtx"/>
@@ -121,11 +134,13 @@
                     <constraint firstAttribute="trailing" secondItem="cZQ-1B-bpK" secondAttribute="trailing" constant="17" id="Bml-lI-ASW"/>
                     <constraint firstItem="KGU-Iu-ynv" firstAttribute="top" secondItem="tF5-kj-db5" secondAttribute="bottom" constant="2" id="C6L-Ed-9jJ"/>
                     <constraint firstAttribute="trailing" secondItem="nIb-A6-uAt" secondAttribute="trailing" constant="17" id="Cgs-gV-rha"/>
+                    <constraint firstItem="tcE-ue-tNP" firstAttribute="top" secondItem="ZlK-7j-3yl" secondAttribute="top" constant="5" id="DJa-Gw-bsh"/>
                     <constraint firstAttribute="bottom" secondItem="nIb-A6-uAt" secondAttribute="bottom" constant="34" id="HKf-Pb-Wwu"/>
                     <constraint firstItem="tF5-kj-db5" firstAttribute="top" secondItem="dZH-CG-pef" secondAttribute="bottom" constant="2" id="HSI-vP-9id"/>
                     <constraint firstItem="mO6-xX-K2a" firstAttribute="top" secondItem="ZlK-7j-3yl" secondAttribute="top" constant="33" id="LAh-Sq-IcX"/>
                     <constraint firstItem="RfM-G2-7rm" firstAttribute="leading" secondItem="8QC-Jj-b8H" secondAttribute="trailing" constant="8" id="REJ-cz-U4W"/>
                     <constraint firstItem="Tu9-le-Pnx" firstAttribute="leading" secondItem="ZlK-7j-3yl" secondAttribute="leading" constant="58" id="S7i-1N-LSY"/>
+                    <constraint firstAttribute="trailing" secondItem="yoQ-wJ-IGV" secondAttribute="trailing" constant="17" id="SOS-dR-UQx"/>
                     <constraint firstAttribute="bottom" secondItem="cZQ-1B-bpK" secondAttribute="bottom" constant="4" id="UR9-r0-rxh"/>
                     <constraint firstItem="KGU-Iu-ynv" firstAttribute="leading" secondItem="Tu9-le-Pnx" secondAttribute="trailing" constant="14" id="YJ5-6d-qId"/>
                     <constraint firstItem="dZH-CG-pef" firstAttribute="leading" secondItem="Wer-Hx-mE8" secondAttribute="trailing" constant="14" id="Ydh-CW-sNx"/>
@@ -137,18 +152,22 @@
                     <constraint firstItem="tF5-kj-db5" firstAttribute="leading" secondItem="Eaf-1V-zWX" secondAttribute="trailing" constant="14" id="gPu-UT-nBl"/>
                     <constraint firstAttribute="trailing" secondItem="tF5-kj-db5" secondAttribute="trailing" constant="178" id="hCO-qT-qff"/>
                     <constraint firstItem="Eaf-1V-zWX" firstAttribute="top" secondItem="Wer-Hx-mE8" secondAttribute="bottom" constant="2" id="hMr-cx-Mbh"/>
+                    <constraint firstItem="yoQ-wJ-IGV" firstAttribute="top" secondItem="ZlK-7j-3yl" secondAttribute="top" constant="4" id="hN9-kb-KRw"/>
                     <constraint firstItem="8QC-Jj-b8H" firstAttribute="top" secondItem="Tu9-le-Pnx" secondAttribute="bottom" constant="1" id="k52-fR-RsG"/>
                     <constraint firstItem="Eaf-1V-zWX" firstAttribute="leading" secondItem="ZlK-7j-3yl" secondAttribute="leading" constant="58" id="m3p-hE-nLv"/>
                     <constraint firstAttribute="bottom" secondItem="mO6-xX-K2a" secondAttribute="bottom" constant="33" id="tGl-C7-0S8"/>
                     <constraint firstAttribute="trailing" secondItem="KGU-Iu-ynv" secondAttribute="trailing" constant="178" id="tTs-6k-f9R"/>
                     <constraint firstAttribute="trailing" secondItem="dZH-CG-pef" secondAttribute="trailing" constant="142" id="v9N-IG-RLO"/>
+                    <constraint firstItem="tcE-ue-tNP" firstAttribute="leading" secondItem="yoQ-wJ-IGV" secondAttribute="trailing" constant="-56" id="vlg-da-jmB"/>
                     <constraint firstItem="dZH-CG-pef" firstAttribute="top" secondItem="ZlK-7j-3yl" secondAttribute="top" constant="8" id="vxd-tC-abR"/>
                     <constraint firstItem="cZQ-1B-bpK" firstAttribute="top" secondItem="nIb-A6-uAt" secondAttribute="bottom" constant="9" id="yUN-nc-X3u"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="actAddress" destination="tcE-ue-tNP" id="ZkP-27-La4"/>
                 <outlet property="btnFavorite" destination="nIb-A6-uAt" id="OQc-ho-qEN"/>
                 <outlet property="img" destination="vRS-te-gcG" id="goB-Bt-b9q"/>
+                <outlet property="lblAddress" destination="yoQ-wJ-IGV" id="YL6-o1-kEc"/>
                 <outlet property="lblFuelType" destination="RfM-G2-7rm" id="SpE-wy-Tid"/>
                 <outlet property="lblMake" destination="dZH-CG-pef" id="bLD-uE-wgk"/>
                 <outlet property="lblMilage" destination="KGU-Iu-ynv" id="yti-wZ-wNS"/>

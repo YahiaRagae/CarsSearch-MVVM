@@ -108,13 +108,25 @@ class BaseCarListViewController:UITableViewController{
         cell.lblRegistrationFirst.text = "\(vehicle.firstRegistration )"
         
         cell.selectionStyle = .none
-        
+
         cell.img.imageFromUrl(urlString: vehicle.images[0])
         
         if(vehicle.accidentFree){
             cell.backgroundColor = UIColor.white
         }else{
             cell.backgroundColor = UIColor.lightGray
+        }
+        
+        cell.lblAddress.isHidden = true
+        cell.lblAddress.text = vehicle.address;
+        cell.actAddress.startAnimating()
+        
+        DispatchQueue.global().async {
+            sleep(2)
+            DispatchQueue.main.async(execute: {
+                cell.lblAddress.isHidden=false
+                cell.actAddress.stopAnimating()
+            })
         }
         return cell
     }

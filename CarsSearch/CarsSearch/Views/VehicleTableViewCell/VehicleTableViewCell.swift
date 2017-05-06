@@ -15,6 +15,8 @@ class VehicleTableViewCell:UITableViewCell{
     @IBOutlet weak var lblFuelType: UILabel!
     @IBOutlet weak var lblRegistrationFirst: UILabel!
     
+    @IBOutlet weak var actAddress: UIActivityIndicatorView!
+    @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var switchFavorite: UISwitch!
     @IBOutlet weak var btnFavorite: UIButton!
     @IBOutlet weak var img: UIImageView!
