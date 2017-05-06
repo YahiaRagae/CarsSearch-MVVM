@@ -62,6 +62,14 @@ class CarListViewController : BaseCarListViewController{
     func onValueChanged(sender: UISwitch) {
         let vehicle : Vehicle = self.items[sender.tag] as! Vehicle
         DataAccessController.sharedInstance.processFavorites(vehicle: vehicle)
+        
+        if(sender.isOn)
+        {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: RootTabViewController.NOTIFICATION_ID_ADD_FAVORITES), object: vehicle)
+        }else{
+            NotificationCenter.default.post(name: Notification.Name(rawValue: RootTabViewController.NOTIFICATION_ID_REMOVE_FAVORITES), object: vehicle)
+        }
+        
     }
     
     
