@@ -26,7 +26,7 @@ enum Filter:String {
 
 //MARK: Protocol
 protocol DataAccessControllerInterface{
-    func getCars(withFilter filter : Filter , completion: ((NSMutableArray, Int) -> Void)?) 
+    func getCars(withFilter filter : Filter , completion: ((NSMutableArray,  String?) -> Void)?)
 }
 
 //MARK: Class
@@ -67,7 +67,7 @@ class DataAccessController : DataAccessControllerInterface {
         self.dataSource = dataSourceForType(source: source)
     }
     // MARK:- Getting Data
-    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, Int) -> Void)?) {
+    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, String?) -> Void)?) {
         self.dataSource?.getCars(withFilter: filter, completion: completion)
     }
 

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class CarListViewController : BaseCarListViewController{
     // MARK:- ViewController Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
@@ -23,7 +24,10 @@ class CarListViewController : BaseCarListViewController{
     override func loadData(isShowActivityIndicator: Bool) {
         super.loadData(isShowActivityIndicator: isShowActivityIndicator)
         
-        DataAccessController.sharedInstance.getCars(withFilter: filter) { (_items, resultCode) in
+        DataAccessController.sharedInstance.getCars(withFilter: filter) { (_items, errorMessage) in
+            if(errorMessage != nil && _items.count == 0 ){
+                self.tableView.makeToast(errorMessage, duration: 2.0, position: "CSToastPositionCenter")
+            }
             self.items.removeAllObjects();
             self.items.addObjects(from: _items as! [Any])
             self.tableView.reloadData()

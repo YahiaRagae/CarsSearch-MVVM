@@ -66,6 +66,7 @@
 		0025D8281EBC8DA00010FA75 /* CarsDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsDataFetcher.swift; sourceTree = "<group>"; };
 		0025D82D1EBC95880010FA75 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		0025D8311EBC95EA0010FA75 /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
+		0025D8331EBDAC8A0010FA75 /* CarsSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarsSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		00D851411EBC541E008210E0 /* CarsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D851441EBC541E008210E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D851491EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -274,6 +275,7 @@
 				00D8514B1EBC541E008210E0 /* Assets.xcassets */,
 				00D8514D1EBC541E008210E0 /* LaunchScreen.storyboard */,
 				00D851501EBC541E008210E0 /* Info.plist */,
+				0025D8331EBDAC8A0010FA75 /* CarsSearch-Bridging-Header.h */,
 			);
 			path = CarsSearch;
 			sourceTree = "<group>";
@@ -397,6 +399,7 @@
 					00D851401EBC541E008210E0 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 45GZ4XUHCD;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					00D851541EBC541E008210E0 = {
@@ -771,12 +774,15 @@
 			baseConfigurationReference = CEB8CF5A7BDC3630538B0C35 /* Pods-CarsSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 45GZ4XUHCD;
 				INFOPLIST_FILE = CarsSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyz.CarsSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarsSearch/CarsSearch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -786,12 +792,14 @@
 			baseConfigurationReference = 847A6031C6B5A02BFEC59AFC /* Pods-CarsSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 45GZ4XUHCD;
 				INFOPLIST_FILE = CarsSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyz.CarsSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarsSearch/CarsSearch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

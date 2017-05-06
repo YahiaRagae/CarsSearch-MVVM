@@ -8,6 +8,8 @@ pod 'MBProgressHUD', '~> 1.0.0'
 pod 'DynamicButton', '~> 4.0.0'
 pod 'SwiftyJSON'
 pod 'Alamofire','4.2.0'
+pod 'Toast', '~> 3.1.0'
+
 
   # Pods for CarsSearch
 

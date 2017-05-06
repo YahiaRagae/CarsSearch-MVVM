@@ -15,7 +15,7 @@ class CarsDataFetcher: BaseDataFetcher {
     let URL_GET_ALL_CARS : String = "URL_GET_ALL_CARS"
     
     // MARK: Getters
-    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, Int) -> Void)?) {
+    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, String?) -> Void)?) {
         let link = "\(getMainLink())make=\(filter.rawValue).json"
         
         getRequestWithJsonReponse(withLink: link) { (response, status) in
@@ -23,7 +23,7 @@ class CarsDataFetcher: BaseDataFetcher {
             if(status){
                 items = self.parseVehicles(response: response)
             }
-            completion?(items,(response.response?.statusCode)!)
+            completion?(items,response.result.error?.localizedDescription)
         }
     }
     
