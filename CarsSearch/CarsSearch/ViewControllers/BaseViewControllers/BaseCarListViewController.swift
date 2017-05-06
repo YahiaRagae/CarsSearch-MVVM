@@ -13,6 +13,12 @@ class BaseCarListViewController:UITableViewController{
     var items:NSMutableArray!;
     var refreshView :UIRefreshControl!
     
+    var filter:Filter = Filter.All
+    
+    @IBOutlet weak var switchFilterAll: UISwitch!
+    @IBOutlet weak var switchFilterBMW: UISwitch!
+    @IBOutlet weak var switchFilterAUDI: UISwitch!
+    @IBOutlet weak var switchFilterMERCEDES: UISwitch!
     
     var isPullToRefreshEnable: Bool = false {
         didSet{
@@ -60,17 +66,12 @@ class BaseCarListViewController:UITableViewController{
     /// Show / Hide Activity Indeicator
     /// - parameter isShow: True to show The Activity Inndicator and False to hide it
     func activityIndeicator(isShow:Bool){
-        if(hud == nil){
-            hud = MBProgressHUD.showAdded(to: self.tableView, animated: true)
+        if(isShow){
+            hud = MBProgressHUD.showAdded(to:  self.tableView, animated: true)
             hud.label.text = "loading"
             hud.mode = .indeterminate
-        }
-        if(isShow){
-            if(hud.isHidden){
-                hud.show(animated: true)
-            }
         }else{
-            hud.hide(animated: true)
+            MBProgressHUD.hide(for: self.tableView, animated: true)
         }
     }
     
@@ -101,6 +102,51 @@ class BaseCarListViewController:UITableViewController{
         return cell
     }
     
- 
+    // MARK:- IBActions Methods
+    
+    @IBAction func onFilterValueChanged(_ sender: UISwitch) {
+        if(sender.isOn){
+            switch(sender.tag){
+            case switchFilterAll.tag:
+                switchFilterBMW.setOn(false, animated: true)
+                switchFilterAUDI.setOn(false, animated: true)
+                switchFilterMERCEDES.setOn(false, animated: true)
+                
+                filter = Filter.All
+                
+            case switchFilterBMW.tag:
+                
+                switchFilterAll.setOn(false, animated: true)
+                switchFilterAUDI.setOn(false, animated: true)
+                switchFilterMERCEDES.setOn(false, animated: true)
+                
+                filter = Filter.BMW
+                
+            case switchFilterAUDI.tag:
+                
+                switchFilterAll.setOn(false, animated: true)
+                switchFilterBMW.setOn(false, animated: true)
+                switchFilterMERCEDES.setOn(false, animated: true)
+                
+                filter = Filter.AUDI
+                
+            case switchFilterMERCEDES.tag:
+                
+                switchFilterAll.setOn(false, animated: true)
+                switchFilterBMW.setOn(false, animated: true)
+                switchFilterAUDI.setOn(false, animated: true)
+                
+                filter = Filter.MERCEDES
+                
+            default:
+                NSLog("none")
+                
+            }
+            loadData(isShowActivityIndicator: true)
+        }else{
+            items.removeAllObjects()
+            self.tableView.reloadData()
+        }
+    }
     
 }
