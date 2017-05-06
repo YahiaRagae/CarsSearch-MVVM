@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZH-CG-pef">
-                        <rect key="frame" x="137" y="8" width="60" height="21"/>
+                        <rect key="frame" x="137" y="8" width="96" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="NtQ-c4-Kor"/>
                         </constraints>
@@ -141,7 +141,7 @@
                     <constraint firstItem="Eaf-1V-zWX" firstAttribute="leading" secondItem="ZlK-7j-3yl" secondAttribute="leading" constant="58" id="m3p-hE-nLv"/>
                     <constraint firstAttribute="bottom" secondItem="mO6-xX-K2a" secondAttribute="bottom" constant="33" id="tGl-C7-0S8"/>
                     <constraint firstAttribute="trailing" secondItem="KGU-Iu-ynv" secondAttribute="trailing" constant="178" id="tTs-6k-f9R"/>
-                    <constraint firstAttribute="trailing" secondItem="dZH-CG-pef" secondAttribute="trailing" constant="178" id="v9N-IG-RLO"/>
+                    <constraint firstAttribute="trailing" secondItem="dZH-CG-pef" secondAttribute="trailing" constant="142" id="v9N-IG-RLO"/>
                     <constraint firstItem="dZH-CG-pef" firstAttribute="top" secondItem="ZlK-7j-3yl" secondAttribute="top" constant="8" id="vxd-tC-abR"/>
                     <constraint firstItem="cZQ-1B-bpK" firstAttribute="top" secondItem="nIb-A6-uAt" secondAttribute="bottom" constant="9" id="yUN-nc-X3u"/>
                 </constraints>
