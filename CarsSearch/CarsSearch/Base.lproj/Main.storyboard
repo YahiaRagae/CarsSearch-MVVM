@@ -34,6 +34,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" id="yQq-ys-IY8">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-ip-YOZ">
+                                    <rect key="frame" x="0.0" y="29" width="49" height="62"/>
+                                    <subviews>
+                                        <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-3S-KGt">
+                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="YxS-cw-6lc"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-Cf-bkP">
+                                            <rect key="frame" x="15" y="31" width="19" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z2u-dd-Zeq">
+                                    <rect key="frame" x="97" y="29" width="49" height="62"/>
+                                    <subviews>
+                                        <switch opaque="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w6h-n4-W0O">
+                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="iKW-RY-EE8"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4C-dc-vRk">
+                                            <rect key="frame" x="3" y="31" width="42" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3TE-nv-oUO">
+                                    <rect key="frame" x="193" y="29" width="49" height="62"/>
+                                    <subviews>
+                                        <switch opaque="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MR5-Cx-hr7">
+                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="9qZ-Yv-ekH"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWA-Jj-2AZ">
+                                            <rect key="frame" x="7" y="31" width="35" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-Uk-MMj">
+                                    <rect key="frame" x="253" y="29" width="122" height="62"/>
+                                    <subviews>
+                                        <switch opaque="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jX6-MU-fwc">
+                                            <rect key="frame" x="37" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="h5g-mg-qc1"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRA-7p-fFC">
+                                            <rect key="frame" x="0.0" y="31" width="122" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="F22-F4-tvJ" id="edE-st-kbO"/>
@@ -41,6 +115,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="ODL-nI-cYr"/>
+                    <connections>
+                        <outlet property="switchFilterAUDI" destination="MR5-Cx-hr7" id="UMS-eY-3lF"/>
+                        <outlet property="switchFilterAll" destination="cG4-3S-KGt" id="dlN-Yx-AzC"/>
+                        <outlet property="switchFilterBMW" destination="w6h-n4-W0O" id="bg5-KQ-oM4"/>
+                        <outlet property="switchFilterMERCEDES" destination="jX6-MU-fwc" id="U6o-Qi-jdH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmP-47-v3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
