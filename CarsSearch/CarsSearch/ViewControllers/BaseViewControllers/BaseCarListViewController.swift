@@ -110,7 +110,12 @@ class BaseCarListViewController:UITableViewController{
         cell.selectionStyle = .none
         
         cell.img.imageFromUrl(urlString: vehicle.images[0])
-               
+        
+        if(vehicle.accidentFree){
+            cell.backgroundColor = UIColor.white
+        }else{
+            cell.backgroundColor = UIColor.lightGray
+        }
         return cell
     }
     

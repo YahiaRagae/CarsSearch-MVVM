@@ -50,6 +50,12 @@ class CarListViewController : BaseCarListViewController{
         
         cell.switchFavorite.setOn(DataAccessController.sharedInstance.checkFavorite(vehicle: vehicle), animated: false)
         
+        if(vehicle.accidentFree){
+            cell.switchFavorite.isEnabled = true
+        }else{
+            cell.switchFavorite.isEnabled = false
+        }
+        
         return cell;
     }
     // MARK:- IBActions Methods
