@@ -10,11 +10,13 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class CarsDataFetcher: BaseDataFetcher {
+   
+
     let URL_GET_ALL_CARS : String = "URL_GET_ALL_CARS"
     
     // MARK: Getters
-    func  getAllCars(  withCompletion completion:  ((NSMutableArray, Int)->Void)?){
-        let link = "\(getLink(URL_GET_ALL_CARS))"
+    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, Int) -> Void)?) {
+        let link = "\(getMainLink())make=\(filter.rawValue).json"
         
         getRequestWithJsonReponse(withLink: link) { (response, status) in
             var   items:NSMutableArray = NSMutableArray()
@@ -23,8 +25,8 @@ class CarsDataFetcher: BaseDataFetcher {
             }
             completion?(items,(response.response?.statusCode)!)
         }
-        
     }
+    
     
     // MARK: Parsers
     func parseVehicles(response: DataResponse<Any>) -> NSMutableArray{

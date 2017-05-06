@@ -26,12 +26,12 @@ enum Filter:String {
 
 //MARK: Protocol
 protocol DataAccessControllerInterface{
-    func getAllCars(completion: ((_ items :NSMutableArray, _ statusCode  : Int) -> Void)?)
+    func getCars(withFilter filter : Filter , completion: ((NSMutableArray, Int) -> Void)?) 
 }
 
 //MARK: Class
 
-class DataAccessController {
+class DataAccessController : DataAccessControllerInterface {
     
     //Singleton Access
     static let sharedInstance = DataAccessController()
@@ -66,11 +66,12 @@ class DataAccessController {
         self.dataSourceType = source
         self.dataSource = dataSourceForType(source: source)
     }
-    // MARK:- Getting Data 
-    
-    func getAllCars(completion: ((NSMutableArray, Int) -> Void)?) {
-        self.dataSource?.getAllCars(completion: completion)
+    // MARK:- Getting Data
+    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, Int) -> Void)?) {
+        self.dataSource?.getCars(withFilter: filter, completion: completion)
     }
+
+    // MARK:- Favorites
     
     func getFavorites()-> NSMutableArray{
         return favoritesController.favorites

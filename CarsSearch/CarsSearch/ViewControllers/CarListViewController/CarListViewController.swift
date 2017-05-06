@@ -23,7 +23,7 @@ class CarListViewController : BaseCarListViewController{
     override func loadData(isShowActivityIndicator: Bool) {
         super.loadData(isShowActivityIndicator: isShowActivityIndicator)
         
-        DataAccessController.sharedInstance.getAllCars { (_items, resultCode) in
+        DataAccessController.sharedInstance.getCars(withFilter: filter) { (_items, resultCode) in
             self.items.removeAllObjects();
             self.items.addObjects(from: _items as! [Any])
             self.tableView.reloadData()

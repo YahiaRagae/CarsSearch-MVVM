@@ -8,7 +8,8 @@
 
 import Foundation
 class OnlineController:NSObject,DataAccessControllerInterface{
-    func getAllCars(completion: ((NSMutableArray, Int) -> Void)?) {
-       CarsDataFetcher().getAllCars(withCompletion: completion)
+    func getCars(withFilter filter : Filter, completion: ((NSMutableArray, Int) -> Void)?) {
+       CarsDataFetcher().getCars(withFilter: filter, completion: completion)
     }
+    
 }

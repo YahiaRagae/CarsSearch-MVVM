@@ -8,7 +8,7 @@
 
 import Foundation
 class DBController:NSObject,DataAccessControllerInterface{
-    func getAllCars(completion: ((NSMutableArray, Int) -> Void)?) {
-        
-    }
+    func getCars(withFilter filter: Filter, completion: ((NSMutableArray, Int) -> Void)?) {
+         
+    } 
 }

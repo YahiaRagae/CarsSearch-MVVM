@@ -62,5 +62,12 @@ open class  BaseDataFetcher: NSObject{
         
         return link;
     }
+    open func getMainLink() ->String{
+        var link = "";
+        let settingsDic:NSDictionary = getSettingdDictionary();
+        link = (settingsDic.object(forKey: BaseDataFetcher.SETTINGS_MAIN_URL) as! String)
+        
+        return link;
+    }
 
 }
