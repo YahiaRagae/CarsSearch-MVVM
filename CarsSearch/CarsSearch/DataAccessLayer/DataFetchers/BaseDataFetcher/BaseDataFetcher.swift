@@ -18,14 +18,23 @@ open class  BaseDataFetcher: NSObject{
     open func getRequestWithJsonReponse( withLink link:String ,    andCompletion  completion:  (( _ response : DataResponse<Any>, _ status : Bool )->Void)? ){
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
+        
+        var headers : [String : String] = [String : String]()
+        headers = ["Cache-Control":"max-age=0, no-cache, no-store, must-revalidate",
+                   "Pragma" : "no-cache",
+                    "Expires": "0"]
+        
         if(sessionManager == nil ){
-            let configuration = URLSessionConfiguration.default 
+            URLCache.shared.removeAllCachedResponses()
+            let configuration = URLSessionConfiguration.default
+            configuration.urlCache = nil
+            configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
             sessionManager = Alamofire.SessionManager(
-                configuration: configuration 
+                configuration: configuration
             )
         }
         
-        sessionManager.request(link, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+        sessionManager.request(link, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
         .validate()
         .responseJSON { (response) in
             
