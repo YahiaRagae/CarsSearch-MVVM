@@ -13,7 +13,7 @@ class FavoritesController : NSObject  {
     static let FAVORITES_LIST  = "FAVORITES_LIST";
     //Singleton Access
     static let sharedInstance = FavoritesController()
-    var favorites:NSMutableArray!
+    private var favorites:NSMutableArray!
     //Init and Init Helpers
     private override init() {
         favorites=NSMutableArray()
@@ -86,5 +86,15 @@ class FavoritesController : NSObject  {
     }
     
     
-    
+    func getFavorite(withFilter  filter:Filter  ) -> NSMutableArray {
+        if(filter == Filter.All){
+            return favorites.mutableCopy() as! NSMutableArray;
+        }
+        let predicate : NSPredicate    = NSPredicate(format: "SELF.make ==[c] %@", filter.rawValue);
+        let filteredArray : NSArray = favorites.filtered(using: predicate) as NSArray
+        if(filteredArray.count > 0){
+            return filteredArray.mutableCopy() as! NSMutableArray
+        }
+        return NSMutableArray()
+    }
 }

@@ -73,8 +73,8 @@ class DataAccessController : DataAccessControllerInterface {
 
     // MARK:- Favorites
     
-    func getFavorites()-> NSMutableArray{
-        return favoritesController.favorites
+    func getFavorite(withFilter  filter:Filter  ) -> NSMutableArray{
+        return favoritesController.getFavorite(withFilter:filter)
     }
     
     func processFavorites(vehicle : Vehicle){
