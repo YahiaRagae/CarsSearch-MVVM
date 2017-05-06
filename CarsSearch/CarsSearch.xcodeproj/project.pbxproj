@@ -22,6 +22,7 @@
 		0025D82A1EBC8DA00010FA75 /* CarsDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D8281EBC8DA00010FA75 /* CarsDataFetcher.swift */; };
 		0025D82E1EBC95880010FA75 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D82D1EBC95880010FA75 /* VehicleTableViewCell.swift */; };
 		0025D8321EBC95EA0010FA75 /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0025D8311EBC95EA0010FA75 /* VehicleTableViewCell.xib */; };
+		0025D83B1EBDBDA80010FA75 /* AysncLoadImage+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025D83A1EBDBDA80010FA75 /* AysncLoadImage+UIImageView.swift */; };
 		00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851441EBC541E008210E0 /* AppDelegate.swift */; };
 		00D8514A1EBC541E008210E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D851481EBC541E008210E0 /* Main.storyboard */; };
 		00D8514C1EBC541E008210E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D8514B1EBC541E008210E0 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		0025D82D1EBC95880010FA75 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		0025D8311EBC95EA0010FA75 /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
 		0025D8331EBDAC8A0010FA75 /* CarsSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarsSearch-Bridging-Header.h"; sourceTree = "<group>"; };
+		0025D83A1EBDBDA80010FA75 /* AysncLoadImage+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AysncLoadImage+UIImageView.swift"; sourceTree = "<group>"; };
 		00D851411EBC541E008210E0 /* CarsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D851441EBC541E008210E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D851491EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -239,6 +241,14 @@
 			path = VehicleTableViewCell;
 			sourceTree = "<group>";
 		};
+		0025D8391EBDBD900010FA75 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				0025D83A1EBDBDA80010FA75 /* AysncLoadImage+UIImageView.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		00D851381EBC541E008210E0 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +275,7 @@
 		00D851431EBC541E008210E0 /* CarsSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0025D8391EBDBD900010FA75 /* Extentions */,
 				0025D82B1EBC95680010FA75 /* Views */,
 				0025D8171EBC6E270010FA75 /* Models */,
 				0025D80D1EBC679F0010FA75 /* Resources */,
@@ -611,6 +622,7 @@
 				0025D7FB1EBC5D1D0010FA75 /* CarListViewController.swift in Sources */,
 				0025D7F51EBC5CE80010FA75 /* BaseCarListViewController.swift in Sources */,
 				0025D8071EBC67190010FA75 /* DataAccessController.swift in Sources */,
+				0025D83B1EBDBDA80010FA75 /* AysncLoadImage+UIImageView.swift in Sources */,
 				0025D82A1EBC8DA00010FA75 /* CarsDataFetcher.swift in Sources */,
 				00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */,
 				0025D81F1EBC73350010FA75 /* OnlineController.swift in Sources */,

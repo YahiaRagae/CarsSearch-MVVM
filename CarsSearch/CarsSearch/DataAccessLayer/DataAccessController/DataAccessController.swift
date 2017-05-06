@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import Alamofire
+import AlamofireImage
 // Desgin Pattern : Singleton
 // Description :  This is a Data Access Layer which is the over all applcation data source  
 
@@ -36,6 +37,10 @@ class DataAccessController : DataAccessControllerInterface {
     //Singleton Access
     static let sharedInstance = DataAccessController()
 
+    
+    //Image Cache
+    let imageCache = AutoPurgingImageCache()
+    
     
     //Variables
     private var dataSourceType: DataSources = DataSources.Onlone

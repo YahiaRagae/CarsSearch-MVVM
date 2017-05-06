@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+
 class BaseCarListViewController:UITableViewController{
     var items:NSMutableArray!;
     var refreshView :UIRefreshControl!
@@ -99,6 +100,9 @@ class BaseCarListViewController:UITableViewController{
         cell.lblPrice.text =  "\(vehicle.price )"
         cell.lblMilage.text = "\(vehicle.mileage )"
         cell.selectionStyle = .none
+        
+        cell.img.imageFromUrl(urlString: vehicle.images[0])
+               
         return cell
     }
     
