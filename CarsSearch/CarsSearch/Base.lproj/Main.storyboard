@@ -141,7 +141,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEG-Hf-IQH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                 <connections>
-                                    <segue destination="F22-F4-tvJ" kind="embed" id="9iE-i7-geL"/>
+                                    <segue destination="F22-F4-tvJ" kind="embed" identifier="embedFavoritesVC" id="9iE-i7-geL"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0x-Az-d3h">
