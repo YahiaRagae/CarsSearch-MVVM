@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 class FavoriteListViewController : BaseCarListViewController{
-    weak var rootVC:UIViewController!
+    weak var rootVC:FavoritesRootViewController!
     override func initViews() {
         super.initViews()
         if(self.navigationController == nil && self.rootVC != nil  ){
@@ -34,6 +34,9 @@ class FavoriteListViewController : BaseCarListViewController{
         self.tableView.reloadData()
         
         loadingDidEnd()
+        
+        //Reset Calcuate Bar Bg
+        rootVC.resetCalculateBarBg()
     }
     
     // MARK:- UITableView Deata Source Methods
