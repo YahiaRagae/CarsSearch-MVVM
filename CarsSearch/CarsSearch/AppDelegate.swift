@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //init Data Access Controller 
         DataAccessController.sharedInstance.setNewDataSource(source: .Onlone)
         
+        IQKeyboardManager.sharedManager().enable = true
+
         // Override point for customization after application launch.
         return true
     }
