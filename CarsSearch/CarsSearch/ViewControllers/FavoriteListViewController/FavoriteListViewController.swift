@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 class FavoriteListViewController : BaseCarListViewController{
+    weak var rootVC:UIViewController!
+    override func initViews() {
+        super.initViews()
+        if(self.navigationController == nil && self.rootVC != nil  ){
+            //Add Filters Button
+            self.rootVC.navigationItem.rightBarButtonItem = sortNavButton()
+        }
+    }
     // MARK:- ViewController Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
