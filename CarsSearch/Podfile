@@ -12,6 +12,8 @@ pod 'Toast', '~> 3.1.0'
 pod 'AlamofireImage', '~> 3.1'
 pod 'IQKeyboardManagerSwift'
 
+pod 'AFViewShaker', '~> 0.0.4'
+
 
 
   # Pods for CarsSearch
