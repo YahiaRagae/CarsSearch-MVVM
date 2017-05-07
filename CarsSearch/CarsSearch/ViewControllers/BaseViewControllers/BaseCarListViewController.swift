@@ -98,7 +98,7 @@ class BaseCarListViewController:UITableViewController{
         }
     }
     
-    func getItems(){
+    func getItems()->NSMutableArray{
         return items;
     }
     // MARK:- UITableView Deata Source Methods
