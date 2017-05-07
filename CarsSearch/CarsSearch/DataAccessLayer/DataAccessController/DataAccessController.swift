@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import AlamofireImage
+
 // Desgin Pattern : Singleton
 // Description :  This is a Data Access Layer which is the over all applcation data source  
 
@@ -57,7 +58,7 @@ class DataAccessController : DataAccessControllerInterface {
         favoritesController = FavoritesController.sharedInstance
     }
     
-    
+    // MARK:- Repository Methods
     func dataSourceForType(source: DataSources) -> DataAccessControllerInterface?{
         switch source {
         case DataSources.Onlone:

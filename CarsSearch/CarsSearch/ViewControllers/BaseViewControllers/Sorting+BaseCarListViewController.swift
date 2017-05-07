@@ -60,7 +60,7 @@ extension BaseCarListViewController {
             }
         }) as! NSMutableArray
         
-        return sortedArray
+        return sortedArray.mutableCopy() as! NSMutableArray
     }
     
     func getSortedList()-> NSMutableArray{
