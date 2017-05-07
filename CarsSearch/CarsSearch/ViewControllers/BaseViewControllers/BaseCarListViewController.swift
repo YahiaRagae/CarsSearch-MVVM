@@ -11,8 +11,8 @@ import UIKit
 import MBProgressHUD
 
 class BaseCarListViewController:UITableViewController{
-    var items:NSMutableArray!;
-    var orginalItems:NSMutableArray!;
+    public  var items:NSMutableArray!;
+    public  var orginalItems:NSMutableArray!;
     
     var refreshView :UIRefreshControl!
     
@@ -96,6 +96,10 @@ class BaseCarListViewController:UITableViewController{
         if(hud != nil && !hud.isHidden){
             activityIndeicator(isShow: false)
         }
+    }
+    
+    func getItems(){
+        return items;
     }
     // MARK:- UITableView Deata Source Methods
     
