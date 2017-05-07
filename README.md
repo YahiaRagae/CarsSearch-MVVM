@@ -8,8 +8,12 @@ Simple Application to search for cars and favorite them
 -  Responsive and smooth  user interface  at all times.
 
 
+## Issues ##
+- There is an issue with from the server side when fetching the Data of specific Filter " BMW " which is returning wrong results including other car makers - check the json file within the repo. 
+
 ## Platforms ##
 - >= iOS 9.0 .
+
 
 ## Language ##
 - Swift 3 .
