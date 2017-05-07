@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //init Data Access Controller 
         DataAccessController.sharedInstance.setNewDataSource(source: .Onlone)
         
+        //Enable IQKeyboardManager
         IQKeyboardManager.sharedManager().enable = true
 
         // Override point for customization after application launch.
