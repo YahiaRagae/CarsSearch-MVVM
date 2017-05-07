@@ -157,13 +157,14 @@
                                         <state key="normal" title="Calculate"/>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Price Here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QhK-UP-EEV">
-                                        <rect key="frame" x="0.0" y="4" width="292" height="36"/>
+                                        <rect key="frame" x="15" y="4" width="277" height="36"/>
+                                        <color key="backgroundColor" red="0.7218547829370815" green="0.72336632013320923" blue="0.29736298434691338" alpha="0.34259463028169013" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="clw-Q0-lj7"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.34259463028169013" colorSpace="calibratedWhite"/>
@@ -175,7 +176,7 @@
                                     <constraint firstAttribute="bottom" secondItem="gDj-qI-Gt6" secondAttribute="bottom" constant="7" id="azk-J4-btJ"/>
                                     <constraint firstAttribute="height" constant="44" id="p2t-Ja-UZE"/>
                                     <constraint firstAttribute="bottom" secondItem="QhK-UP-EEV" secondAttribute="bottom" constant="4" id="vuD-ea-n3h"/>
-                                    <constraint firstItem="QhK-UP-EEV" firstAttribute="leading" secondItem="b0x-Az-d3h" secondAttribute="leading" id="yBi-bc-vnv"/>
+                                    <constraint firstItem="QhK-UP-EEV" firstAttribute="leading" secondItem="b0x-Az-d3h" secondAttribute="leading" constant="15" id="yBi-bc-vnv"/>
                                 </constraints>
                             </view>
                         </subviews>
