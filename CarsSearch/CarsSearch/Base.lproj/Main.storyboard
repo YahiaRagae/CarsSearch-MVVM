@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="2090" y="196"/>
         </scene>
-        <!--Favorites Root View Controller-->
+        <!--Favorites-->
         <scene sceneID="Aa4-PL-aXe">
             <objects>
                 <viewController storyboardIdentifier="FavoritesRootViewController" id="9Z1-wt-zbz" customClass="FavoritesRootViewController" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,7 +190,7 @@
                             <constraint firstItem="mEG-Hf-IQH" firstAttribute="top" secondItem="loL-4B-mAK" secondAttribute="bottom" constant="-64" id="w6L-B5-AxH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="97W-gd-bsR"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="97W-gd-bsR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJl-fO-Nde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
