@@ -12,7 +12,7 @@ Simple Application to search for cars and favorite them
 - There is an issue with from the server side when fetching the Data of specific Filter " BMW " which is returning wrong results including other car makers - check the json file within the repo. 
 
 ## Platforms ##
-- >= iOS 9.0 .
+-  > = iOS 9.0 .
 
 
 ## Language ##
