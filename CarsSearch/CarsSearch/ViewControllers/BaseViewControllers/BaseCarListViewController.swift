@@ -29,8 +29,13 @@ class BaseCarListViewController:UITableViewController{
                 return
             }
             refreshView = UIRefreshControl()
+
+            if #available(iOS 10.0, *) {
+                tableView.refreshControl = refreshView
+            } else {
+                tableView.addSubview(refreshView)
+            }
             refreshView.addTarget(self, action: #selector(loadData), for:.valueChanged)
-            tableView.addSubview(refreshView) // not required when using UITableViewController
         }
     }
     
