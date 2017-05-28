@@ -25,7 +25,7 @@ Simple Application to search for cars and favorite them
 
 
 ## Desgin Pattern Used ##
--  MVC 
+-  MVVM 
 -  Single Tone :  FavoritesController ,  DataAccessController .
 -  Repository Pattern : DataAccessController 
 -  Facade Pattern : DataAccessController : Which provides a simplified interface for the Data Access Layer 
