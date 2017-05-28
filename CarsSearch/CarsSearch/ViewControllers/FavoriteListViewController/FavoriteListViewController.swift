@@ -22,7 +22,7 @@ class FavoriteListViewController : BaseCarListViewController{
         super.viewWillAppear(animated)
         loadData(isShowActivityIndicator: true)
         
-        NotificationCenter.default.post(name: Notification.Name(rawValue: RootTabViewController.NOTIFICATION_ID_FAVORITES_OPENED), object: nil)
+        NotificationCenter.default.post(name: RootTabViewModel.NOTIFICATION_ID_FAVORITES_OPENED , object: nil)
     }
     
     // MARK:- Helper Methods

@@ -65,9 +65,9 @@ class CarListViewController : BaseCarListViewController{
         
         if(sender.isOn)
         {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: RootTabViewController.NOTIFICATION_ID_ADD_FAVORITES), object: vehicle)
+            NotificationCenter.default.post(name: RootTabViewModel.NOTIFICATION_ID_ADD_FAVORITES , object: vehicle)
         }else{
-            NotificationCenter.default.post(name: Notification.Name(rawValue: RootTabViewController.NOTIFICATION_ID_REMOVE_FAVORITES), object: vehicle)
+            NotificationCenter.default.post(name: RootTabViewModel.NOTIFICATION_ID_REMOVE_FAVORITES , object: vehicle)
         }
         
     }
