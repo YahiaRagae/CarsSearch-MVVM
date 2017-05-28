@@ -35,14 +35,14 @@ class RootTabViewModel : NSObject,RootTabViewModelProtocol{
         //register favoritedOpened Notificaiton
         NotificationCenter.default.addObserver(self, selector: #selector(favoritedOpened), name: RootTabViewModel.NOTIFICATION_ID_FAVORITES_OPENED, object: nil)
         
-
+        
     }
     func unRegisterLocalNotificaiton(){
         //remove  observers
         NotificationCenter.default.removeObserver(self, name: RootTabViewModel.NOTIFICATION_ID_ADD_FAVORITES, object: nil)
         NotificationCenter.default.removeObserver(self, name: RootTabViewModel.NOTIFICATION_ID_REMOVE_FAVORITES, object: nil)
         NotificationCenter.default.removeObserver(self, name: RootTabViewModel.NOTIFICATION_ID_FAVORITES_OPENED, object: nil)
-
+        
     }
     
     
@@ -55,7 +55,7 @@ class RootTabViewModel : NSObject,RootTabViewModelProtocol{
         if let vehicle:Vehicle = chechIfVehicleExist(vehicle: notification.object as! Vehicle){
             favoritedUnSeenItems.remove(vehicle)
             if(favoritedUnSeenItems.count != 0 ){
-               badge.value = "\(favoritedUnSeenItems.count)"
+                badge.value = "\(favoritedUnSeenItems.count)"
             }else{
                 badge.value = ""
             }

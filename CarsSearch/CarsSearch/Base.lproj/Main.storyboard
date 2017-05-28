@@ -29,7 +29,7 @@
         <!--Favorites-->
         <scene sceneID="9ye-bc-gxy">
             <objects>
-                <tableViewController storyboardIdentifier="FavoriteListViewController" id="F22-F4-tvJ" customClass="FavoriteListViewController" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FavoriteListView" id="F22-F4-tvJ" customClass="FavoriteListView" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tvy-Og-nVF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
         <!--Cars-->
         <scene sceneID="tRs-x0-fwi">
             <objects>
-                <tableViewController storyboardIdentifier="CarListViewController" id="WKc-Aw-9K8" customClass="CarListViewController" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CarListView" id="WKc-Aw-9K8" customClass="CarListView" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="ka1-Xe-O1N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

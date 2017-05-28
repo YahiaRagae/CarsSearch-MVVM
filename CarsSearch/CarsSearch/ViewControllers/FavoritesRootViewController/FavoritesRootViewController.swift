@@ -11,7 +11,7 @@ import UIKit
 import AFViewShaker
 class FavoritesRootViewController:UIViewController{
     @IBOutlet weak var viewCalculateBar: UIView!
-    var favoriteListViewController:FavoriteListViewController!
+    var favoriteListViewController:FavoriteListView!
     var viewShaker:AFViewShaker!
     @IBOutlet weak var tfAmount: UITextField!
     // MARK:- ViewController Life Cycle Methods
@@ -30,11 +30,9 @@ class FavoritesRootViewController:UIViewController{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "embedFavoritesVC"){
-            favoriteListViewController = segue.destination as! FavoriteListViewController
+            favoriteListViewController = segue.destination as! FavoriteListView
             favoriteListViewController.rootVC = self
         }
-        
-        
         
     }
     

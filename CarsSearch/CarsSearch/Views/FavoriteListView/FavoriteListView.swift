@@ -1,15 +1,15 @@
 //
-//  FavoriteListViewController.swift
+//  FavoriteListView.swift
 //  CarsSearch
 //
-//  Created by Yahia on 5/5/17.
+//  Created by Yahia Work on 5/28/17.
 //  Copyright © 2017 Yahia. All rights reserved.
 //
 
 import Foundation
-import UIKit
-class FavoriteListViewController : BaseCarListViewController{
+class FavoriteListView:BaseCarListView  {
     weak var rootVC:FavoritesRootViewController!
+    
     override func initViews() {
         super.initViews()
         if(self.navigationController == nil && self.rootVC != nil  ){
@@ -17,6 +17,7 @@ class FavoriteListViewController : BaseCarListViewController{
             self.rootVC.navigationItem.rightBarButtonItem = sortNavButton()
         }
     }
+    
     // MARK:- ViewController Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,11 +29,8 @@ class FavoriteListViewController : BaseCarListViewController{
     // MARK:- Helper Methods
     override func loadData(isShowActivityIndicator: Bool) {
         super.loadData(isShowActivityIndicator: isShowActivityIndicator)
-        orginalItems = DataAccessController.sharedInstance.getFavorite(withFilter: filter)
-        items = getSortedList()
-        
+        mv.loadCarsFromFavorites();
         self.tableView.reloadData()
-        
         loadingDidEnd()
         
         //Reset Calcuate Bar Bg
@@ -52,8 +50,7 @@ class FavoriteListViewController : BaseCarListViewController{
     }
     // MARK:- IBActions Methods
     func deleteVehicle(sender: UIButton) {
-        let vehicle : Vehicle = self.items[sender.tag] as! Vehicle
-        DataAccessController.sharedInstance.processFavorites(vehicle: vehicle)
+        mv.processFavoritesAt(index: sender.tag)
         loadData(isShowActivityIndicator: true)
     }
 }

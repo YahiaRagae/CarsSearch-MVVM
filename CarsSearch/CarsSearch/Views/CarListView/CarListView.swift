@@ -1,19 +1,17 @@
 //
-//  CarListViewController.swift
+//  CarListView.swift
 //  CarsSearch
 //
-//  Created by Yahia on 5/5/17.
+//  Created by Yahia Work on 5/28/17.
 //  Copyright © 2017 Yahia. All rights reserved.
 //
 
 import Foundation
-import UIKit
-
-class CarListViewController : BaseCarListViewController{
+class CarListView: BaseCarListView {
+    
     // MARK:- ViewController Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.items = self.getSortedList()
         self.tableView.reloadData()
     }
     
@@ -22,18 +20,15 @@ class CarListViewController : BaseCarListViewController{
         super.initViews()
         self.isPullToRefreshEnable = true
     }
+    
     override func loadData(isShowActivityIndicator: Bool) {
         super.loadData(isShowActivityIndicator: isShowActivityIndicator)
-        
-        DataAccessController.sharedInstance.getCars(withFilter: filter) { (_items, errorMessage) in
-            if(errorMessage != nil && _items.count == 0 ){
+        mv.loadCarsFromInternet { (errorMessage) in
+            if(errorMessage != nil  ){
                 self.tableView.makeToast(errorMessage, duration: 2.0, position: "CSToastPositionCenter")
+            }else{
+                self.tableView.reloadData()
             }
-            self.orginalItems = _items.mutableCopy()   as! NSMutableArray
-            self.items = self.getSortedList()
-            
-            
-            self.tableView.reloadData()
             self.loadingDidEnd()
         }
     }
@@ -41,7 +36,7 @@ class CarListViewController : BaseCarListViewController{
     // MARK:- UITableView Deata Source Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let   cell = super.tableView(self.tableView, cellForRowAt: indexPath) as! VehicleTableViewCell
-        let vehicle : Vehicle = self.items[indexPath.row] as! Vehicle
+        let vehicle : Vehicle = mv.getVehiclefor(index: indexPath.row)
         
         
         cell.switchFavorite.isHidden = false
@@ -60,15 +55,8 @@ class CarListViewController : BaseCarListViewController{
     }
     // MARK:- IBActions Methods
     func onValueChanged(sender: UISwitch) {
-        let vehicle : Vehicle = self.items[sender.tag] as! Vehicle
-        DataAccessController.sharedInstance.processFavorites(vehicle: vehicle)
-        
-        if(sender.isOn)
-        {
-            NotificationCenter.default.post(name: RootTabViewModel.NOTIFICATION_ID_ADD_FAVORITES , object: vehicle)
-        }else{
-            NotificationCenter.default.post(name: RootTabViewModel.NOTIFICATION_ID_REMOVE_FAVORITES , object: vehicle)
-        }
+        mv.processFavoritesAt(index: sender.tag)
+        mv.sendLocalNotificationFor(status: sender.isOn, and: sender.tag)
         
     }
     

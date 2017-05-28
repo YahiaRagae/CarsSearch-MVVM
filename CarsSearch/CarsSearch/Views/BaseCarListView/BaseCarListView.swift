@@ -1,35 +1,31 @@
 //
-//  BaseCarListViewController.swift
+//  BaseCarListView.swift
 //  CarsSearch
 //
-//  Created by Yahia on 5/5/17.
+//  Created by Yahia Work on 5/28/17.
 //  Copyright © 2017 Yahia. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
 import MBProgressHUD
-
-class BaseCarListViewController:UITableViewController{
-    public  var items:NSMutableArray!;
-    public  var orginalItems:NSMutableArray!;
-    
-    var refreshView :UIRefreshControl!
-    
-    var filter:Filter = Filter.All
+class BaseCarListView: UITableViewController {
+    let mv:CarListViewModel = CarListViewModel()
     
     @IBOutlet weak var switchFilterAll: UISwitch!
     @IBOutlet weak var switchFilterBMW: UISwitch!
     @IBOutlet weak var switchFilterAUDI: UISwitch!
     @IBOutlet weak var switchFilterMERCEDES: UISwitch!
     
+    var refreshView :UIRefreshControl!
     var isPullToRefreshEnable: Bool = false {
         didSet{
             if(refreshView != nil ){
                 return
             }
             refreshView = UIRefreshControl()
-
+            
             if #available(iOS 10.0, *) {
                 tableView.refreshControl = refreshView
             } else {
@@ -38,8 +34,6 @@ class BaseCarListViewController:UITableViewController{
             refreshView.addTarget(self, action: #selector(loadData), for:.valueChanged)
         }
     }
-    
-    
     var hud : MBProgressHUD!;
     // MARK:- ViewController Life Cycle Methods
     override func viewDidLoad() {
@@ -54,8 +48,7 @@ class BaseCarListViewController:UITableViewController{
     
     /// initialization of non views objects
     func initData(){
-        items = NSMutableArray()
-        orginalItems = NSMutableArray()
+        mv.initData();
     }
     
     /// initialization related to the views
@@ -63,7 +56,6 @@ class BaseCarListViewController:UITableViewController{
         
         //Register UITable Cell
         self.tableView.register(UINib(nibName: "VehicleTableViewCell", bundle: nil), forCellReuseIdentifier: "VehicleTableViewCell")
-
         
         //Add Filters Button
         self.navigationItem.rightBarButtonItem = sortNavButton()
@@ -99,17 +91,19 @@ class BaseCarListViewController:UITableViewController{
     }
     
     func getItems()->NSMutableArray{
-        return items;
+        return mv.getSortedList();
     }
     // MARK:- UITableView Deata Source Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count;
+        return mv.getSortedList().count;
     }
     
     override public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let vehicle : Vehicle = self.items[indexPath.row] as! Vehicle
+        let vehicle : Vehicle = mv.getVehiclefor(index: indexPath.row)
+        
         let   cell : VehicleTableViewCell  =  self.tableView.dequeueReusableCell(withIdentifier: "VehicleTableViewCell")! as! VehicleTableViewCell ;
+        
         cell.lblFuelType.text = "\(vehicle.fuelType )"
         cell.lblMake.text =  "\(vehicle.make )"
         cell.lblPrice.text =  "\(vehicle.price )"
@@ -117,7 +111,7 @@ class BaseCarListViewController:UITableViewController{
         cell.lblRegistrationFirst.text = "\(vehicle.firstRegistration )"
         
         cell.selectionStyle = .none
-
+        
         cell.img.imageFromUrl(urlString: vehicle.images[0])
         
         if(vehicle.accidentFree){
@@ -150,7 +144,7 @@ class BaseCarListViewController:UITableViewController{
                 switchFilterAUDI.setOn(false, animated: true)
                 switchFilterMERCEDES.setOn(false, animated: true)
                 
-                filter = Filter.All
+                mv.filter = Filter.All
                 
             case switchFilterBMW.tag:
                 
@@ -158,7 +152,7 @@ class BaseCarListViewController:UITableViewController{
                 switchFilterAUDI.setOn(false, animated: true)
                 switchFilterMERCEDES.setOn(false, animated: true)
                 
-                filter = Filter.BMW
+                mv.filter = Filter.BMW
                 
             case switchFilterAUDI.tag:
                 
@@ -166,7 +160,7 @@ class BaseCarListViewController:UITableViewController{
                 switchFilterBMW.setOn(false, animated: true)
                 switchFilterMERCEDES.setOn(false, animated: true)
                 
-                filter = Filter.AUDI
+                mv.filter = Filter.AUDI
                 
             case switchFilterMERCEDES.tag:
                 
@@ -174,7 +168,7 @@ class BaseCarListViewController:UITableViewController{
                 switchFilterBMW.setOn(false, animated: true)
                 switchFilterAUDI.setOn(false, animated: true)
                 
-                filter = Filter.MERCEDES
+                mv.filter = Filter.MERCEDES
                 
             default:
                 NSLog("none")
@@ -182,7 +176,7 @@ class BaseCarListViewController:UITableViewController{
             }
             loadData(isShowActivityIndicator: true)
         }else{
-            items.removeAllObjects()
+            mv.removeAllObjects()
             self.tableView.reloadData()
         }
     }
