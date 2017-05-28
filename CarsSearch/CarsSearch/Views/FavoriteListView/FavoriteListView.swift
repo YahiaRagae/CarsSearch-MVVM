@@ -7,15 +7,22 @@
 //
 
 import Foundation
+import UIKit
+import AFViewShaker
+
 class FavoriteListView:BaseCarListView  {
-    weak var rootVC:FavoritesRootViewController!
     
+    
+    @IBOutlet weak var viewCalculateBar: UIView!
+    var viewShaker:AFViewShaker!
+    @IBOutlet weak var tfAmount: UITextField!
+    
+    let calculationBarVM:CalculationBarViewModel = CalculationBarViewModel();
     override func initViews() {
         super.initViews()
-        if(self.navigationController == nil && self.rootVC != nil  ){
-            //Add Filters Button
-            self.rootVC.navigationItem.rightBarButtonItem = sortNavButton()
-        }
+        
+        viewShaker = AFViewShaker(view: tfAmount)
+
     }
     
     // MARK:- ViewController Life Cycle Methods
@@ -24,6 +31,8 @@ class FavoriteListView:BaseCarListView  {
         loadData(isShowActivityIndicator: true)
         
         NotificationCenter.default.post(name: RootTabViewModel.NOTIFICATION_ID_FAVORITES_OPENED , object: nil)
+        
+        resetCalculateBarBg()
     }
     
     // MARK:- Helper Methods
@@ -34,9 +43,11 @@ class FavoriteListView:BaseCarListView  {
         loadingDidEnd()
         
         //Reset Calcuate Bar Bg
-        rootVC.resetCalculateBarBg()
+        resetCalculateBarBg()
     }
-    
+    func resetCalculateBarBg(){
+        viewCalculateBar.backgroundColor = UIColor.white
+    }
     // MARK:- UITableView Deata Source Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let   cell = super.tableView(self.tableView, cellForRowAt: indexPath) as! VehicleTableViewCell
@@ -53,4 +64,19 @@ class FavoriteListView:BaseCarListView  {
         mv.processFavoritesAt(index: sender.tag)
         loadData(isShowActivityIndicator: true)
     }
+    
+    // MARK:- IBActions Methods
+    @IBAction func btnClaculate(sender: UIButton) {
+        let amountStr : String = tfAmount.text!
+        if let amount = Int(amountStr) {
+            if(calculationBarVM.checkAmount(items: mv.getSortedList(), amount: amount) ){
+                viewCalculateBar.backgroundColor = UIColor.green
+            }else{
+                viewCalculateBar.backgroundColor = UIColor.red
+            }
+        }else{
+            viewShaker.shake()
+        }
+    }
+
 }
