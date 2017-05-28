@@ -26,106 +26,6 @@
             </objects>
             <point key="canvasLocation" x="-444" y="-153"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="9ye-bc-gxy">
-            <objects>
-                <tableViewController storyboardIdentifier="FavoriteListView" id="F22-F4-tvJ" customClass="FavoriteListView" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tvy-Og-nVF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" id="yQq-ys-IY8">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-ip-YOZ">
-                                    <rect key="frame" x="0.0" y="29" width="49" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-3S-KGt">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="YxS-cw-6lc"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-Cf-bkP">
-                                            <rect key="frame" x="15" y="31" width="19" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z2u-dd-Zeq">
-                                    <rect key="frame" x="96.5" y="29" width="49" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w6h-n4-W0O">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="iKW-RY-EE8"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4C-dc-vRk">
-                                            <rect key="frame" x="4" y="31" width="41.5" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3TE-nv-oUO">
-                                    <rect key="frame" x="193" y="29" width="49" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MR5-Cx-hr7">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="9qZ-Yv-ekH"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWA-Jj-2AZ">
-                                            <rect key="frame" x="7.5" y="31" width="34.5" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-Uk-MMj">
-                                    <rect key="frame" x="253" y="29" width="122" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jX6-MU-fwc">
-                                            <rect key="frame" x="36.5" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="F22-F4-tvJ" eventType="valueChanged" id="h5g-mg-qc1"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRA-7p-fFC">
-                                            <rect key="frame" x="0.0" y="31" width="122" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                        </stackView>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="F22-F4-tvJ" id="edE-st-kbO"/>
-                            <outlet property="delegate" destination="F22-F4-tvJ" id="i89-mr-PAs"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Favorites" id="ODL-nI-cYr"/>
-                    <connections>
-                        <outlet property="switchFilterAUDI" destination="MR5-Cx-hr7" id="UMS-eY-3lF"/>
-                        <outlet property="switchFilterAll" destination="cG4-3S-KGt" id="dlN-Yx-AzC"/>
-                        <outlet property="switchFilterBMW" destination="w6h-n4-W0O" id="bg5-KQ-oM4"/>
-                        <outlet property="switchFilterMERCEDES" destination="jX6-MU-fwc" id="U6o-Qi-jdH"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pmP-47-v3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2090" y="196"/>
-        </scene>
         <!--FavoritesRootViewController-->
         <scene sceneID="Aa4-PL-aXe">
             <objects>
@@ -141,7 +41,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEG-Hf-IQH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                 <connections>
-                                    <segue destination="F22-F4-tvJ" kind="embed" identifier="embedFavoritesVC" id="9iE-i7-geL"/>
+                                    <segue destination="snK-ii-2Na" kind="embed" identifier="embedFavoritesVC" id="h0T-Rx-oiK"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0x-Az-d3h">
@@ -216,111 +116,131 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="WKc-Aw-9K8" kind="relationship" relationship="rootViewController" id="lYp-zh-DfF"/>
+                        <segue destination="fT3-u2-rSL" kind="relationship" relationship="rootViewController" id="zWg-e3-cDv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMX-BF-cm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="428" y="-499.70014992503752"/>
         </scene>
-        <!--Cars-->
-        <scene sceneID="tRs-x0-fwi">
+        <!--Car List View-->
+        <scene sceneID="K4L-fV-dU5">
             <objects>
-                <tableViewController storyboardIdentifier="CarListView" id="WKc-Aw-9K8" customClass="CarListView" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="ka1-Xe-O1N">
+                <viewController storyboardIdentifier="CarListView" id="fT3-u2-rSL" customClass="CarListView" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CnF-Vn-w8w"/>
+                        <viewControllerLayoutGuide type="bottom" id="m45-Kb-P1z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbm-6O-xn4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aqy-RM-1O1">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRa-HM-IlB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" id="UUj-0i-R39">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7hX-CF-rLd">
+                                            <rect key="frame" x="0.0" y="29" width="49" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWj-Tw-Euz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="fT3-u2-rSL" eventType="valueChanged" id="vCj-o5-rhK"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-hP-CDU">
+                                                    <rect key="frame" x="15" y="31" width="19" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Vg-Cc-mRo">
+                                            <rect key="frame" x="96.5" y="29" width="49" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-TM-fag">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="fT3-u2-rSL" eventType="valueChanged" id="EHo-EG-uy3"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-nK-Ead">
+                                                    <rect key="frame" x="4" y="31" width="41.5" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Amm-aA-qcm">
+                                            <rect key="frame" x="193" y="29" width="49" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lvr-jT-i1V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="fT3-u2-rSL" eventType="valueChanged" id="hF6-Sh-D0J"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpX-Zy-uB1">
+                                                    <rect key="frame" x="7.5" y="31" width="34.5" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8aD-ko-z11">
+                                            <rect key="frame" x="253" y="29" width="122" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EPG-OW-t3D">
+                                                    <rect key="frame" x="36.5" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="fT3-u2-rSL" eventType="valueChanged" id="b2b-bh-Wht"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URG-Ng-DAP">
+                                                    <rect key="frame" x="0.0" y="31" width="122" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <connections>
+                                    <outlet property="dataSource" destination="fT3-u2-rSL" id="2MA-dN-33f"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" id="pcP-aE-50T">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rnv-aY-fe3">
-                                    <rect key="frame" x="0.0" y="29" width="49" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3i-cJ-Twi">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="WKc-Aw-9K8" eventType="valueChanged" id="dtk-JQ-Vrm"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-6t-v5q">
-                                            <rect key="frame" x="15" y="31" width="19" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rOP-dj-E4U">
-                                    <rect key="frame" x="96.5" y="29" width="49" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gc9-1C-aCu">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="WKc-Aw-9K8" eventType="valueChanged" id="9Tu-Fy-aZP"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQX-SF-epQ">
-                                            <rect key="frame" x="4" y="31" width="41.5" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Pd-hZ-W17">
-                                    <rect key="frame" x="193" y="29" width="49" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0xy-8q-SVR">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="WKc-Aw-9K8" eventType="valueChanged" id="0Cu-6I-fyq"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-mC-cAT">
-                                            <rect key="frame" x="7.5" y="31" width="34.5" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RFs-fq-0bO">
-                                    <rect key="frame" x="253" y="29" width="122" height="62"/>
-                                    <subviews>
-                                        <switch opaque="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2rm-id-ugC">
-                                            <rect key="frame" x="36.5" y="0.0" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="onFilterValueChanged:" destination="WKc-Aw-9K8" eventType="valueChanged" id="0qI-qJ-o2J"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHX-PP-l2j">
-                                            <rect key="frame" x="0.0" y="31" width="122" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                        </stackView>
-                        <connections>
-                            <outlet property="dataSource" destination="WKc-Aw-9K8" id="4WR-iv-AQ1"/>
-                            <outlet property="delegate" destination="WKc-Aw-9K8" id="a11-TF-98b"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Cars" id="xDD-SD-d4I"/>
+                        <constraints>
+                            <constraint firstItem="NRa-HM-IlB" firstAttribute="leading" secondItem="bbm-6O-xn4" secondAttribute="leading" id="25w-qa-htx"/>
+                            <constraint firstItem="NRa-HM-IlB" firstAttribute="top" secondItem="CnF-Vn-w8w" secondAttribute="bottom" id="AZS-c6-XEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="NRa-HM-IlB" secondAttribute="trailing" id="NEW-ok-rZJ"/>
+                            <constraint firstItem="m45-Kb-P1z" firstAttribute="top" secondItem="NRa-HM-IlB" secondAttribute="bottom" id="eUG-Jt-kPo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ei5-ZG-dCl"/>
                     <connections>
-                        <outlet property="switchFilterAUDI" destination="0xy-8q-SVR" id="HJZ-qy-SGd"/>
-                        <outlet property="switchFilterAll" destination="e3i-cJ-Twi" id="1xm-q9-y7k"/>
-                        <outlet property="switchFilterBMW" destination="gc9-1C-aCu" id="b0V-2K-OCA"/>
-                        <outlet property="switchFilterMERCEDES" destination="2rm-id-ugC" id="Nl4-3A-zOI"/>
+                        <outlet property="switchFilterAUDI" destination="Lvr-jT-i1V" id="9X3-Qt-jn4"/>
+                        <outlet property="switchFilterAll" destination="QWj-Tw-Euz" id="myq-bn-Gyt"/>
+                        <outlet property="switchFilterBMW" destination="V8e-TM-fag" id="0xP-mb-9rC"/>
+                        <outlet property="switchFilterMERCEDES" destination="EPG-OW-t3D" id="mSi-Z0-tn3"/>
+                        <outlet property="tableView" destination="NRa-HM-IlB" id="fXy-Xy-ygF"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BcH-j7-umt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FL0-ZF-Rw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="-613"/>
+            <point key="canvasLocation" x="1168.8" y="-500.59970014992507"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="zkP-4v-Zfg">
@@ -340,6 +260,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nea-nC-w5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="428" y="196.55172413793105"/>
+        </scene>
+        <!--Favorite List View-->
+        <scene sceneID="j6S-Up-eg7">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteListView" id="snK-ii-2Na" customClass="FavoriteListView" customModule="CarsSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hHR-nQ-R9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="MqW-nD-EIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Uo-mz-djm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OtE-MM-eSo">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f2R-ON-UO5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" id="g8T-wE-Qxo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KBr-8i-m7B">
+                                            <rect key="frame" x="0.0" y="29" width="49" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kR-7Z-41U">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="snK-ii-2Na" eventType="valueChanged" id="sGx-tE-Edv"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtI-PP-BAE">
+                                                    <rect key="frame" x="15" y="31" width="19" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Pv-tZ-bO0">
+                                            <rect key="frame" x="96.5" y="29" width="49" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gY9-1Z-Iae">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="snK-ii-2Na" eventType="valueChanged" id="YTQ-Xx-u7B"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-l2-YkM">
+                                                    <rect key="frame" x="4" y="31" width="41.5" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gE1-v0-5mD">
+                                            <rect key="frame" x="193" y="29" width="49" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kiP-iL-dbJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="snK-ii-2Na" eventType="valueChanged" id="hIA-8Z-beY"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNV-lg-pho">
+                                                    <rect key="frame" x="7.5" y="31" width="34.5" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZC6-Pv-YMa">
+                                            <rect key="frame" x="253" y="29" width="122" height="62"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ja-H3-zR4">
+                                                    <rect key="frame" x="36.5" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onFilterValueChanged:" destination="snK-ii-2Na" eventType="valueChanged" id="GYv-Xq-Lb7"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ3-ER-jP3">
+                                                    <rect key="frame" x="0.0" y="31" width="122" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <connections>
+                                    <outlet property="dataSource" destination="snK-ii-2Na" id="Ego-sT-OQF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f2R-ON-UO5" firstAttribute="top" secondItem="hHR-nQ-R9v" secondAttribute="bottom" id="63r-WE-nsg"/>
+                            <constraint firstItem="f2R-ON-UO5" firstAttribute="leading" secondItem="6Uo-mz-djm" secondAttribute="leading" id="E7a-nX-F6K"/>
+                            <constraint firstAttribute="trailing" secondItem="f2R-ON-UO5" secondAttribute="trailing" id="gB2-w5-EYW"/>
+                            <constraint firstItem="MqW-nD-EIe" firstAttribute="top" secondItem="f2R-ON-UO5" secondAttribute="bottom" id="h4U-FA-yRC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fRe-5i-gYP"/>
+                    <connections>
+                        <outlet property="switchFilterAUDI" destination="kiP-iL-dbJ" id="8my-uG-gzd"/>
+                        <outlet property="switchFilterAll" destination="9kR-7Z-41U" id="ixy-p1-vTo"/>
+                        <outlet property="switchFilterBMW" destination="gY9-1Z-Iae" id="o4w-Y9-vvF"/>
+                        <outlet property="switchFilterMERCEDES" destination="4Ja-H3-zR4" id="bEr-Nq-REb"/>
+                        <outlet property="tableView" destination="f2R-ON-UO5" id="q0N-kX-MCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrp-KI-JFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="196"/>
         </scene>
     </scenes>
     <resources>

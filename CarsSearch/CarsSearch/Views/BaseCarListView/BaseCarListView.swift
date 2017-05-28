@@ -10,9 +10,11 @@
 import Foundation
 import UIKit
 import MBProgressHUD
-class BaseCarListView: UITableViewController {
+class BaseCarListView: UIViewController,UITableViewDataSource {
+    
     let mv:CarListViewModel = CarListViewModel()
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var switchFilterAll: UISwitch!
     @IBOutlet weak var switchFilterBMW: UISwitch!
     @IBOutlet weak var switchFilterAUDI: UISwitch!
@@ -95,11 +97,11 @@ class BaseCarListView: UITableViewController {
     }
     // MARK:- UITableView Deata Source Methods
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mv.getSortedList().count;
     }
     
-    override public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let vehicle : Vehicle = mv.getVehiclefor(index: indexPath.row)
         
         let   cell : VehicleTableViewCell  =  self.tableView.dequeueReusableCell(withIdentifier: "VehicleTableViewCell")! as! VehicleTableViewCell ;
