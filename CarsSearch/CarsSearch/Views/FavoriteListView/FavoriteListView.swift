@@ -11,18 +11,15 @@ import UIKit
 import AFViewShaker
 
 class FavoriteListView:BaseCarListView  {
-    
-    
     @IBOutlet weak var viewCalculateBar: UIView!
-    var viewShaker:AFViewShaker!
     @IBOutlet weak var tfAmount: UITextField!
     
+    var viewShaker:AFViewShaker!
     let calculationBarVM:CalculationBarViewModel = CalculationBarViewModel();
+    
     override func initViews() {
         super.initViews()
-        
         viewShaker = AFViewShaker(view: tfAmount)
-
     }
     
     // MARK:- ViewController Life Cycle Methods
@@ -78,5 +75,5 @@ class FavoriteListView:BaseCarListView  {
             viewShaker.shake()
         }
     }
-
+    
 }
