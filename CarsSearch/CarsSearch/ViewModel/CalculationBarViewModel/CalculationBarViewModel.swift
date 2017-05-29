@@ -8,6 +8,16 @@
 
 import Foundation
 class CalculationBarViewModel: NSObject {
+    
+    func barColor(items:NSMutableArray , amount : Int)->UIColor{
+        if(checkAmount(items: items, amount: amount) ){
+            return UIColor.green
+        }else{
+            return UIColor.red
+        }
+
+    }
+    
     func checkAmount(items:NSMutableArray , amount : Int)->Bool{
         var totalAmount:Int = 0
         for i in 0 ..< items.count{

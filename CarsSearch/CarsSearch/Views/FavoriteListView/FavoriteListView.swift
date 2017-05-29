@@ -56,11 +56,7 @@ class FavoriteListView:BaseCarListView  {
     @IBAction func btnClaculate(sender: UIButton) {
         let amountStr : String = tfAmount.text!
         if let amount = Int(amountStr) {
-            if(calculationBarVM.checkAmount(items: mv.getSortedList(), amount: amount) ){
-                viewCalculateBar.backgroundColor = UIColor.green
-            }else{
-                viewCalculateBar.backgroundColor = UIColor.red
-            }
+            viewCalculateBar.backgroundColor = calculationBarVM.barColor(items: mv.getSortedList(), amount: amount)
         }else{
             viewShaker.shake()
         }
