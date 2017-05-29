@@ -36,29 +36,10 @@ class CarListView: BaseCarListView {
     // MARK:- UITableView Deata Source Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let   cell = super.tableView(self.tableView, cellForRowAt: indexPath) as! VehicleTableViewCell
-        let vehicle : Vehicle = mv.getVehiclefor(index: indexPath.row)
-        
-        
-        cell.switchFavorite.isHidden = false
-        cell.switchFavorite.tag = indexPath.row
-        cell.switchFavorite.addTarget(self, action: #selector(onValueChanged), for: UIControlEvents.valueChanged)
-        
-        cell.switchFavorite.setOn(DataAccessController.sharedInstance.checkFavorite(vehicle: vehicle), animated: false)
-        
-        if(vehicle.accidentFree){
-            cell.switchFavorite.isEnabled = true
-        }else{
-            cell.switchFavorite.isEnabled = false
-        }
-        
+        cell.mv = mv.viewModelForCell(at: indexPath.row, with: .CARS)
         return cell;
     }
-    // MARK:- IBActions Methods
-    func onValueChanged(sender: UISwitch) {
-        mv.processFavoritesAt(index: sender.tag)
-        mv.sendLocalNotificationFor(status: sender.isOn, and: sender.tag)
-        
-    }
+  
     
     
 }

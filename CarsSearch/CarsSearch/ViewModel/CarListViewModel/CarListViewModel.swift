@@ -61,6 +61,12 @@ class CarListViewModel:NSObject {
         return items;
     }
     
+    func viewModelForCell(at index: Int, with cellType:VehicleTableViewModel.CellType) -> VehicleTableViewModel {
+        
+        return VehicleTableViewModel(vehicle: getSortedList().object(at: index) as! Vehicle , index: index,cellType: cellType)
+
+    }
+    
     func sortArrayByFirstRegistration(by:SortBy, items:NSMutableArray)-> NSMutableArray{
         let sortedArray : NSMutableArray =  items.sorted(by: { (obj1, obj2) -> Bool in
             let vehicle1 =  (obj1 as! Vehicle)

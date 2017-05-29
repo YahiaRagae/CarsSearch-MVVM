@@ -48,18 +48,8 @@ class FavoriteListView:BaseCarListView  {
     // MARK:- UITableView Deata Source Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let   cell = super.tableView(self.tableView, cellForRowAt: indexPath) as! VehicleTableViewCell
-        
-        cell.btnFavorite.isHidden = false
-        cell.btnFavorite.tag = indexPath.row
-        cell.btnFavorite.addTarget(self, action: #selector(deleteVehicle), for: UIControlEvents.touchUpInside)
-        
-        
+        cell.mv = mv.viewModelForCell(at: indexPath.row, with: .Favorites)
         return cell;
-    }
-    // MARK:- IBActions Methods
-    func deleteVehicle(sender: UIButton) {
-        mv.processFavoritesAt(index: sender.tag)
-        loadData(isShowActivityIndicator: true)
     }
     
     // MARK:- IBActions Methods
