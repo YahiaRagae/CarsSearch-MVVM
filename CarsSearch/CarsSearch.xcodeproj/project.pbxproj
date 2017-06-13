@@ -32,6 +32,7 @@
 		00505D981EDAF6B50082C6CC /* CalculationBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D971EDAF6B50082C6CC /* CalculationBarViewModel.swift */; };
 		00505D9B1EDC257A0082C6CC /* VehicleTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */; };
 		008F304C1EDC41B700A97E7D /* Notifications+BaseCarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F304B1EDC41B700A97E7D /* Notifications+BaseCarListView.swift */; };
+		00A6BEB41EEFD90C001E3B0C /* DataReposetory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */; };
 		00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851441EBC541E008210E0 /* AppDelegate.swift */; };
 		00D8514A1EBC541E008210E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D851481EBC541E008210E0 /* Main.storyboard */; };
 		00D8514C1EBC541E008210E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D8514B1EBC541E008210E0 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		00505D971EDAF6B50082C6CC /* CalculationBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationBarViewModel.swift; sourceTree = "<group>"; };
 		00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewModel.swift; sourceTree = "<group>"; };
 		008F304B1EDC41B700A97E7D /* Notifications+BaseCarListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+BaseCarListView.swift"; sourceTree = "<group>"; };
+		00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReposetory.swift; sourceTree = "<group>"; };
 		00D851411EBC541E008210E0 /* CarsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D851441EBC541E008210E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D851491EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		0025D8011EBC66CD0010FA75 /* DataAccessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				00A6BEB21EEFD905001E3B0C /* DataReposetory */,
 				0025D8241EBC8DA00010FA75 /* DataFetchers */,
 				0025D8021EBC66E30010FA75 /* DataAccessController */,
 			);
@@ -307,6 +310,14 @@
 				00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */,
 			);
 			path = VehicleTableViewModel;
+			sourceTree = "<group>";
+		};
+		00A6BEB21EEFD905001E3B0C /* DataReposetory */ = {
+			isa = PBXGroup;
+			children = (
+				00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */,
+			);
+			path = DataReposetory;
 			sourceTree = "<group>";
 		};
 		00D851381EBC541E008210E0 = {
@@ -697,6 +708,7 @@
 				0025D82E1EBC95880010FA75 /* addressLabelStatus.swift in Sources */,
 				00505D901EDAE5E10082C6CC /* LoadFavorites+CarListViewModel.swift in Sources */,
 				0025D8291EBC8DA00010FA75 /* BaseDataFetcher.swift in Sources */,
+				00A6BEB41EEFD90C001E3B0C /* DataReposetory.swift in Sources */,
 				0025D8211EBC73400010FA75 /* FavoritesController.swift in Sources */,
 				0025D8231EBC8B5F0010FA75 /* DBController.swift in Sources */,
 			);

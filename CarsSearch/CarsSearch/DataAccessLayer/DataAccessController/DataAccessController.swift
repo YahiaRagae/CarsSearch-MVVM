@@ -13,10 +13,7 @@ import AlamofireImage
 // Desgin Pattern : Singleton
 // Description :  This is a Data Access Layer which is the over all applcation data source  
 
-enum DataSources {
-    case Onlone
-    case DB
-}
+
 
 enum Filter:String {
     case All = "all"
@@ -44,37 +41,21 @@ class DataAccessController : DataAccessControllerInterface {
     
     
     //Variables
-    private var dataSourceType: DataSources = DataSources.Onlone
-    private var dataSource: DataAccessControllerInterface?
-    
-    var onlineController:OnlineController!
-    var dbController:DBController!
+    private var dataReposetory:DataReposetory!
     var favoritesController:FavoritesController!
        
     //Init and Init Helpers
     private init() {
-        onlineController = OnlineController()
-        dbController = DBController()
+        dataReposetory = DataReposetory()
         favoritesController = FavoritesController.sharedInstance
     }
     
-    // MARK:- Repository Methods
-    func dataSourceForType(source: DataSources) -> DataAccessControllerInterface?{
-        switch source {
-        case DataSources.Onlone:
-            return onlineController
-        case DataSources.DB:
-            return dbController
-        }
-    }
-    
     func setNewDataSource(source: DataSources) {
-        self.dataSourceType = source
-        self.dataSource = dataSourceForType(source: source)
+        dataReposetory.setNewDataSource(source: source)
     }
     // MARK:- Getting Data
     func getCars(withFilter filter: Filter, completion: ((NSMutableArray, String?) -> Void)?) {
-        self.dataSource?.getCars(withFilter: filter, completion: completion)
+        self.dataReposetory?.getDataSource().getCars(withFilter: filter, completion: completion)
     }
 
     // MARK:- Favorites
