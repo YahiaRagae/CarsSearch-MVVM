@@ -33,11 +33,11 @@
 		00505D9B1EDC257A0082C6CC /* VehicleTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */; };
 		008F304C1EDC41B700A97E7D /* Notifications+BaseCarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F304B1EDC41B700A97E7D /* Notifications+BaseCarListView.swift */; };
 		00A6BEB41EEFD90C001E3B0C /* DataReposetory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */; };
+		00A6BEB61EEFDDFC001E3B0C /* DataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6BEB51EEFDDFC001E3B0C /* DataSourceTest.swift */; };
 		00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851441EBC541E008210E0 /* AppDelegate.swift */; };
 		00D8514A1EBC541E008210E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D851481EBC541E008210E0 /* Main.storyboard */; };
 		00D8514C1EBC541E008210E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D8514B1EBC541E008210E0 /* Assets.xcassets */; };
 		00D8514F1EBC541E008210E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D8514D1EBC541E008210E0 /* LaunchScreen.storyboard */; };
-		00D8515A1EBC541E008210E0 /* CarsSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851591EBC541E008210E0 /* CarsSearchTests.swift */; };
 		00D851651EBC541E008210E0 /* CarsSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D851641EBC541E008210E0 /* CarsSearchUITests.swift */; };
 		7B365BBFD418A54A3D01BFA8 /* Pods_CarsSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E414503A1E670FE6A49D1E /* Pods_CarsSearchUITests.framework */; };
 		8C299148DC96A5A10AFB888F /* Pods_CarsSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A74FBD77573E77B1A7F832B /* Pods_CarsSearch.framework */; };
@@ -89,6 +89,7 @@
 		00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewModel.swift; sourceTree = "<group>"; };
 		008F304B1EDC41B700A97E7D /* Notifications+BaseCarListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+BaseCarListView.swift"; sourceTree = "<group>"; };
 		00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReposetory.swift; sourceTree = "<group>"; };
+		00A6BEB51EEFDDFC001E3B0C /* DataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceTest.swift; sourceTree = "<group>"; };
 		00D851411EBC541E008210E0 /* CarsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D851441EBC541E008210E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D851491EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		00D8514E1EBC541E008210E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00D851501EBC541E008210E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00D851551EBC541E008210E0 /* CarsSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00D851591EBC541E008210E0 /* CarsSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsSearchTests.swift; sourceTree = "<group>"; };
 		00D8515B1EBC541E008210E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00D851601EBC541E008210E0 /* CarsSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D851641EBC541E008210E0 /* CarsSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsSearchUITests.swift; sourceTree = "<group>"; };
@@ -364,8 +364,8 @@
 		00D851581EBC541E008210E0 /* CarsSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				00D851591EBC541E008210E0 /* CarsSearchTests.swift */,
 				00D8515B1EBC541E008210E0 /* Info.plist */,
+				00A6BEB51EEFDDFC001E3B0C /* DataSourceTest.swift */,
 			);
 			path = CarsSearchTests;
 			sourceTree = "<group>";
@@ -718,7 +718,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D8515A1EBC541E008210E0 /* CarsSearchTests.swift in Sources */,
+				00A6BEB61EEFDDFC001E3B0C /* DataSourceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
