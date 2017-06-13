@@ -30,7 +30,7 @@
 		00505D901EDAE5E10082C6CC /* LoadFavorites+CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D8D1EDAE5E10082C6CC /* LoadFavorites+CarListViewModel.swift */; };
 		00505D931EDAE6B10082C6CC /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D921EDAE6B10082C6CC /* FavoriteListView.swift */; };
 		00505D981EDAF6B50082C6CC /* CalculationBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D971EDAF6B50082C6CC /* CalculationBarViewModel.swift */; };
-		00505D9B1EDC257A0082C6CC /* VehicleTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */; };
+		00505D9B1EDC257A0082C6CC /* VehicleTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00505D9A1EDC257A0082C6CC /* VehicleTableCellViewModel.swift */; };
 		008F304C1EDC41B700A97E7D /* Notifications+BaseCarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F304B1EDC41B700A97E7D /* Notifications+BaseCarListView.swift */; };
 		00A6BEB41EEFD90C001E3B0C /* DataReposetory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */; };
 		00A6BEB61EEFDDFC001E3B0C /* DataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6BEB51EEFDDFC001E3B0C /* DataSourceTest.swift */; };
@@ -88,7 +88,7 @@
 		00505D8D1EDAE5E10082C6CC /* LoadFavorites+CarListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoadFavorites+CarListViewModel.swift"; sourceTree = "<group>"; };
 		00505D921EDAE6B10082C6CC /* FavoriteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
 		00505D971EDAF6B50082C6CC /* CalculationBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationBarViewModel.swift; sourceTree = "<group>"; };
-		00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewModel.swift; sourceTree = "<group>"; };
+		00505D9A1EDC257A0082C6CC /* VehicleTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableCellViewModel.swift; sourceTree = "<group>"; };
 		008F304B1EDC41B700A97E7D /* Notifications+BaseCarListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+BaseCarListView.swift"; sourceTree = "<group>"; };
 		00A6BEB31EEFD90C001E3B0C /* DataReposetory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReposetory.swift; sourceTree = "<group>"; };
 		00A6BEB51EEFDDFC001E3B0C /* DataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceTest.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		00505D6E1EDABE5A0082C6CC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				00505D991EDC25740082C6CC /* VehicleTableViewModel */,
+				00505D991EDC25740082C6CC /* VehicleTableCellViewModel */,
 				00505D961EDAF6AF0082C6CC /* CalculationBarViewModel */,
 				00505D841EDAE12F0082C6CC /* CarListViewModel */,
 				00505D6F1EDABE830082C6CC /* RootTabViewModel */,
@@ -308,11 +308,12 @@
 			path = CalculationBarViewModel;
 			sourceTree = "<group>";
 		};
-		00505D991EDC25740082C6CC /* VehicleTableViewModel */ = {
+		00505D991EDC25740082C6CC /* VehicleTableCellViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				00505D9A1EDC257A0082C6CC /* VehicleTableViewModel.swift */,
+				00505D9A1EDC257A0082C6CC /* VehicleTableCellViewModel.swift */,
 			);
+			name = VehicleTableCellViewModel;
 			path = VehicleTableViewModel;
 			sourceTree = "<group>";
 		};
@@ -706,7 +707,7 @@
 				00D851451EBC541E008210E0 /* AppDelegate.swift in Sources */,
 				0025D81F1EBC73350010FA75 /* OnlineController.swift in Sources */,
 				00505D8F1EDAE5E10082C6CC /* LoadCars+CarListViewModel.swift in Sources */,
-				00505D9B1EDC257A0082C6CC /* VehicleTableViewModel.swift in Sources */,
+				00505D9B1EDC257A0082C6CC /* VehicleTableCellViewModel.swift in Sources */,
 				00505D931EDAE6B10082C6CC /* FavoriteListView.swift in Sources */,
 				00505D981EDAF6B50082C6CC /* CalculationBarViewModel.swift in Sources */,
 				00505D801EDADD2B0082C6CC /* Sorting+BaseCarListView.swift in Sources */,

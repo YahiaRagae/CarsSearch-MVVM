@@ -61,9 +61,9 @@ class CarListViewModel:NSObject {
         return items;
     }
     
-    func viewModelForCell(at index: Int, with cellType:VehicleTableViewModel.CellType) -> VehicleTableViewModel {
+    func viewModelForCell(at index: Int, with cellType:VehicleTableCellViewModel.CellType) -> VehicleTableCellViewModel {
         
-        return VehicleTableViewModel(vehicle: getSortedList().object(at: index) as! Vehicle , index: index,cellType: cellType)
+        return VehicleTableCellViewModel(vehicle: getSortedList().object(at: index) as! Vehicle , index: index,cellType: cellType)
 
     }
     

@@ -1,5 +1,5 @@
 //
-//  VehicleTableViewModel.swift
+//  VehicleTableCellViewModel.swift
 //  CarsSearch
 //
 //  Created by Yahia Work on 5/29/17.
@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class VehicleTableViewModel: NSObject {
+class VehicleTableCellViewModel: NSObject {
     
     var vehicle:Vehicle;
     var firstImage: String

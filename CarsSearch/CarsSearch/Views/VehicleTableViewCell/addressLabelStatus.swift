@@ -21,7 +21,7 @@ class VehicleTableViewCell:UITableViewCell{
     @IBOutlet weak var btnFavorite: UIButton!
     @IBOutlet weak var img: UIImageView!
     
-    var mv:VehicleTableViewModel!{
+    var mv:VehicleTableCellViewModel!{
         didSet{
              configure()
         }
